@@ -1,0 +1,648 @@
+html {
+    scroll-behavior: smooth;
+   
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", system-ui, Arial, sans-serif;
+    color: #111;
+    position: relative;
+    min-height: 100vh;
+    background: url("backk.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* overlay */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.25));
+    z-index: -1;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    text-decoration: none;
+    color: #000;
+}
+
+.logo {
+    font-size: 34px;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: 0.03em;
+}
+
+.logo-link.active-logo .logo {
+    color: #0077b5;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.2rem;
+    margin-left: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    position: relative;
+    font-size: 0.98rem;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #0077b5;
+    transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a.active {
+    color: #0077b5;
+}
+
+.linkedin-icon {
+    width: 36px;
+    cursor: pointer;
+    filter: brightness(0);
+    transition: 0.25s ease;
+}
+
+.linkedin-icon:hover {
+    transform: scale(1.12);
+    filter: invert(32%) sepia(99%) saturate(7487%) hue-rotate(189deg);
+}
+
+/* NAVBAR CONTACT ME BUTTON with moving gradient */
+.contact-nav-btn {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #111, #0077b5, #111);
+    background-size: 300% 100%;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+    margin-left: auto;
+    animation: contactGradient 4s ease infinite;
+}
+
+.contact-nav-btn:hover {
+    transform: translateY(-2px);
+}
+
+@keyframes contactGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* LAYOUT */
+.section {
+    min-height: 100vh;
+    padding: 100px 8vw 80px;
+    max-width: 1200px;
+    margin: auto;
+    scroll-margin-top: 90px;
+    color: #111;
+    /* new for snapping */
+    scroll-snap-align: start;
+}
+
+
+.section h2 {
+    margin-bottom: 24px;
+}
+
+/* HERO */
+.hero {
+    padding-top: 80px;
+}
+.section:not(#hero) {
+    padding-top: 5px !important;   /* smaller gap */
+}
+
+.hero-layout {
+    display: flex;
+    align-items: center;
+    left: 400px;
+}
+
+.hero-left-block {
+    position: absolute;
+    top: 100px;
+    left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.profile-pic {
+    width: 230px;
+    height: 230px;
+    border-radius: 25px;
+    object-fit: cover;
+    border: 4px solid #111;
+    margin-bottom: 12px;
+}
+
+/* ICONS */
+.hero-icons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    width: 150%;
+}
+
+.hero-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-icon-img {
+    animation: floatLoop 3s ease-in-out infinite;
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: 12px;
+    padding: 4px;
+    background: none;
+    box-shadow: none;
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+@keyframes floatLoop {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+.hero-icon-link:hover .hero-icon-img {
+    transform: translateY(-2px);
+}
+
+.hero-icon-resume:hover .hero-icon-img {
+    filter: invert(36%) sepia(96%) saturate(2323%) hue-rotate(193deg);
+}
+
+.hero-icon-github:hover .hero-icon-img {
+    filter: invert(36%) sepia(96%) saturate(2323%) hue-rotate(273deg);
+}
+
+.hero-icon-linkedin:hover .hero-icon-img {
+    filter: invert(29%) sepia(94%) saturate(2083%) hue-rotate(191deg);
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.65);
+    border-radius: 14px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    backdrop-filter: blur(6px);
+}
+
+/* ABOUT BOX HOVER */
+.hero-about {
+    max-width: 10000px;
+    max-height: 5000px;
+    margin-left: 200px;
+    transition: transform 0.50s ease, box-shadow 1.5s ease;
+}
+
+.hero-about:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 25px 100px rgba(0,0,0,0.18);
+}
+
+.about-text {
+    font-size: 1.02rem;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+/* SKILLS GRID */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px,1fr));
+    gap: 18px;
+}
+
+/* Skill Icons */
+.skill-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.skill-icon {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 12px;
+    transition: transform 0.25s ease;
+}
+
+.skill-icon:hover {
+    transform: scale(1.15);
+}
+
+.skill-card ul {
+    padding-left: 18px;
+    margin: 8px 0 0;
+}
+
+/* TITLES */
+.projects-title,
+.skills-title,
+.contact-title {
+    font-size: clamp(6rem, 6vw, 4.2rem);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    margin: 0 0 24px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* PROJECTS */
+.project-card + .project-card {
+    margin-top: 16px;
+}
+
+.project-meta {
+    margin-bottom: 8px;
+}
+
+.pill {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    background: rgba(0,0,0,0.06);
+    margin-right: 6px;
+}
+
+/* Clickable project cards + spacing */
+.project-link-wrapper {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 30px;
+}
+
+.project-link-wrapper:hover .project-card {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+    transition: 0.25s ease;
+}
+
+/* === SWU EDUCATION & ATHLETICS === */
+
+.edu-title {
+    font-size: clamp(6rem, 6vw, 4.2rem);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    margin: 0 0 24px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.edu-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 22px;
+    align-items: stretch;
+}
+
+.edu-column h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.edu-list {
+    margin-top: 14px;
+    padding-left: 18px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.edu-text {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+/* Carousels */
+.carousel {
+    position: relative;
+    width: 100%;
+    padding-top: 62%;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 14px;
+    background: #000;
+}
+
+.carousel-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.carousel-img.active {
+    opacity: 1;
+}
+
+/* Reuse button style for links */
+.ethics-paper-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.ethics-paper-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    background: #222;
+}
+
+/* === ETHICS SECTION === */
+
+.ethics-title {
+    font-size: clamp(2.2rem, 8vw, 3.2rem);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    margin: 0 0 28px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.ethics-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1.4fr);
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.ethics-main h3,
+.ethics-paper h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.ethics-main p,
+.ethics-paper p {
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+/* Scripture block */
+.ethics-scripture {
+    margin-top: 16px;
+    padding: 12px 14px;
+    border-left: 4px solid #111;
+    background: rgba(255,255,255,0.8);
+    border-radius: 10px;
+}
+
+.ethics-verse {
+    margin: 0;
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+.ethics-verse-ref {
+    margin: 6px 0 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+/* CONTACT CARDS (title already above) */
+
+.contact-card {
+    max-width: 900px;
+}
+
+.contact-intro {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: rgba(0,0,0,0.8);
+}
+
+.contact-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 10px;
+}
+
+.contact-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.9);
+    text-decoration: none;
+    color: #111;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: 1px solid rgba(0,0,0,0.06);
+    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.contact-chip:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+    background: #111;
+    color: #fff;
+}
+
+.contact-chip:hover .contact-icon {
+    filter: brightness(0) invert(1);
+}
+
+.contact-icon {
+    width: 22px;
+    height: 22px;
+}
+
+/* FOOTER */
+.footer {
+    background: rgba(255,255,255,0.55);
+    padding: 6px 0;                 /* was 18px — now tiny */
+    font-size: 0.75rem;             /* smaller text */
+    text-align: center;
+    color: #000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    position: relative;             /* no more weird shifting */
+    width: 100%;
+    margin-top: 40px;               /* gentle spacing from content */
+}
+
+.footer img {
+    width: 20px;                    /* smaller LinkedIn icon */
+    height: 20px;
+    opacity: 0.8;
+    transition: 0.2s ease;
+}
+
+.footer img:hover {
+    opacity: 1;
+}
+
+/* ANIMATIONS */
+.fade-in {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* MOBILE FIXES ------------------------------- */
+@media (max-width: 800px) {
+
+    .navbar {
+        padding: 12px 16px;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .nav-links {
+        gap: 0.8rem;
+        margin-left: 8px;
+        font-size: 0.85rem;
+    }
+
+    .section {
+        padding: 80px 16px 60px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .hero-layout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        left: 0;
+        position: relative;
+    }
+
+    .hero-left-block {
+        position: static;
+        margin-right: 0;
+        align-items: center;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-icons {
+        width: 100%;
+        justify-content: center;
+        gap: 14px;
+    }
+
+    .hero-about {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .contact-methods {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .contact-title {
+        font-size: clamp(2.2rem, 8vw, 3.2rem);
+    }
+
+    .ethics-layout,
+    .edu-layout {
+        grid-template-columns: 1fr;
+    }
+}
+#contact.section {
+    padding-top: 80px !important;
+}
+
+/* LIFT ETHICS SECTION UP A BIT */
+#ethics.section {
+    padding-top: 20px !important;
+}
+
+.ethics-layout {
+    margin-top: 20px !important;
+}
