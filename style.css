@@ -12,29 +12,28 @@ body {
     color: #111;
     position: relative;
     min-height: 100vh;
-    background: url("backk-min.jpg") no-repeat center center fixed;
+    background: url("backk.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
-/* dark overlay over background */
+/* overlay */
 body::before {
     content: "";
     position: fixed;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,0.45), rgba(0,0,0,0.25));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.25));
     z-index: -1;
 }
 
-/* ================= NAVBAR ================= */
-
+/* NAVBAR */
 .navbar {
     width: 100%;
     padding: 16px 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 40px;
-    background: rgba(255,255,255,0.88);
+    gap: 60px;
+    background: rgba(255, 255, 255, 0.88);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid #eee;
     position: sticky;
@@ -65,7 +64,7 @@ body::before {
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 2.2rem;
     margin-left: 0;
 }
 
@@ -97,8 +96,7 @@ body::before {
     color: #0077b5;
 }
 
-/* CONTACT BUTTON IN NAV */
-
+/* CONTACT BTN */
 .contact-nav-btn {
     padding: 10px 20px;
     background: linear-gradient(90deg, #111, #0077b5, #111);
@@ -118,45 +116,47 @@ body::before {
 }
 
 @keyframes contactGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
-/* ================= BASE SECTION LAYOUT ================= */
-
+/* SECTIONS */
 .section {
     min-height: 100vh;
-    padding: 100px 8vw 80px;
+    padding: 110px 8vw 80px;
     max-width: 1200px;
     margin: auto;
     scroll-margin-top: 90px;
     color: #111;
-    scroll-snap-align: start;
 }
 
 .section h2 {
     margin-bottom: 24px;
 }
 
-/* ================= HERO ================= */
-
+/* HERO */
 .hero {
     padding-top: 80px;
 }
 
 .hero-layout {
     display: flex;
-    align-items: center;
-    gap: 48px;
+    align-items: flex-start;
+    gap: 40px;
 }
 
-/* left column: image + icons */
 .hero-left-block {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 0 0 auto;
+    flex-shrink: 0;
 }
 
 .profile-pic {
@@ -189,16 +189,22 @@ body::before {
     object-fit: contain;
     border-radius: 12px;
     padding: 4px;
-    filter: brightness(0) invert(1);
-    transition: transform 0.2s ease, filter 0.2s ease;
     background: none;
     box-shadow: none;
+    filter: brightness(0) invert(1);
+    transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 @keyframes floatLoop {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-6px); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .hero-icon-link:hover .hero-icon-img {
@@ -217,23 +223,24 @@ body::before {
     filter: invert(29%) sepia(94%) saturate(2083%) hue-rotate(191deg);
 }
 
-/* right column: about card */
+/* CARD */
 .card {
-    background: rgba(255,255,255,0.65);
+    background: rgba(255, 255, 255, 0.65);
     border-radius: 14px;
     padding: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
     backdrop-filter: blur(6px);
 }
 
+/* ABOUT BOX */
 .hero-about {
     flex: 1;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    transition: transform 0.5s ease, box-shadow 1.5s ease;
 }
 
 .hero-about:hover {
     transform: translateY(-6px) scale(1.03);
-    box-shadow: 0 25px 100px rgba(0,0,0,0.18);
+    box-shadow: 0 25px 100px rgba(0, 0, 0, 0.18);
 }
 
 .about-text {
@@ -242,11 +249,10 @@ body::before {
     margin-bottom: 14px;
 }
 
-/* ================= SKILLS ================= */
-
+/* SKILLS GRID */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     gap: 18px;
 }
 
@@ -279,9 +285,8 @@ body::before {
 /* TITLES */
 .projects-title,
 .skills-title,
-.contact-title,
-.edu-title {
-    font-size: clamp(2.4rem, 6vw, 3.6rem);
+.contact-title {
+    font-size: clamp(2.6rem, 6vw, 4.2rem);
     font-weight: 800;
     letter-spacing: 0.04em;
     margin: 0 0 24px;
@@ -289,8 +294,16 @@ body::before {
     text-transform: uppercase;
 }
 
-/* ================= PROJECTS ================= */
+.edu-title {
+    font-size: clamp(2.6rem, 6vw, 4.2rem);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    margin: 0 0 24px;
+    color: #fff;
+    text-transform: uppercase;
+}
 
+/* PROJECTS */
 .project-card + .project-card {
     margin-top: 16px;
 }
@@ -304,7 +317,7 @@ body::before {
     padding: 3px 10px;
     border-radius: 999px;
     font-size: 0.75rem;
-    background: rgba(0,0,0,0.06);
+    background: rgba(0, 0, 0, 0.06);
     margin-right: 6px;
 }
 
@@ -317,12 +330,11 @@ body::before {
 
 .project-link-wrapper:hover .project-card {
     transform: translateY(-6px);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
     transition: 0.25s ease;
 }
 
-/* ================= SWU EDUCATION & ATHLETICS ================= */
-
+/* SWU LAYOUT */
 .edu-layout {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -348,7 +360,7 @@ body::before {
     margin-bottom: 12px;
 }
 
-/* Carousels */
+/* CAROUSEL */
 .carousel {
     position: relative;
     width: 100%;
@@ -373,28 +385,7 @@ body::before {
     opacity: 1;
 }
 
-/* Button reused for links */
-.ethics-paper-btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 16px;
-    border-radius: 999px;
-    background: #111;
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 600;
-    transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
-}
-
-.ethics-paper-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
-    background: #222;
-}
-
-/* ================= ETHICS ================= */
-
+/* ETHICS */
 .ethics-title {
     font-size: clamp(2.2rem, 8vw, 3.2rem);
     font-weight: 800;
@@ -429,7 +420,7 @@ body::before {
     margin-top: 16px;
     padding: 12px 14px;
     border-left: 4px solid #111;
-    background: rgba(255,255,255,0.8);
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
 }
 
@@ -445,8 +436,7 @@ body::before {
     font-weight: 600;
 }
 
-/* ================= CONTACT ================= */
-
+/* CONTACT */
 .contact-card {
     max-width: 900px;
 }
@@ -454,7 +444,7 @@ body::before {
 .contact-intro {
     margin-bottom: 20px;
     font-size: 1rem;
-    color: rgba(0,0,0,0.8);
+    color: rgba(0, 0, 0, 0.8);
 }
 
 .contact-methods {
@@ -470,18 +460,18 @@ body::before {
     gap: 10px;
     padding: 10px 16px;
     border-radius: 999px;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     color: #111;
     font-size: 0.95rem;
     font-weight: 600;
-    border: 1px solid rgba(0,0,0,0.06);
+    border: 1px solid rgba(0, 0, 0, 0.06);
     transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
 }
 
 .contact-chip:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.18);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
     background: #111;
     color: #fff;
 }
@@ -495,10 +485,9 @@ body::before {
     height: 22px;
 }
 
-/* ================= FOOTER ================= */
-
+/* FOOTER */
 .footer {
-    background: rgba(255,255,255,0.55);
+    background: rgba(255, 255, 255, 0.55);
     padding: 6px 0;
     font-size: 0.75rem;
     text-align: center;
@@ -511,8 +500,7 @@ body::before {
     margin-top: 40px;
 }
 
-/* ================= ANIMATIONS ================= */
-
+/* ANIMATIONS */
 .fade-in {
     opacity: 0;
     transform: translateY(12px);
@@ -524,29 +512,25 @@ body::before {
     transform: translateY(0);
 }
 
-/* ================= MOBILE ================= */
-
+/* MOBILE */
 @media (max-width: 800px) {
-
     .navbar {
-        padding: 10px 12px;
-        gap: 8px;
+        padding: 12px 16px;
+        gap: 10px;
     }
 
     .logo {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     .nav-links {
-        gap: 0.6rem;
-        margin-left: 4px;
-        font-size: 0.8rem;
-        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-left: 8px;
+        font-size: 0.85rem;
     }
 
     .section {
-        min-height: auto;              /* let content size section */
-        padding: 70px 16px 50px;
+        padding: 90px 16px 60px;
         max-width: 100%;
         margin: 0 auto;
     }
@@ -558,11 +542,11 @@ body::before {
     .hero-layout {
         flex-direction: column;
         align-items: center;
-        text-align: left;
+        gap: 24px;
     }
 
-    .hero-about {
-        width: 100%;
+    .hero-left-block {
+        align-items: center;
     }
 
     .profile-pic {
@@ -571,9 +555,17 @@ body::before {
     }
 
     .hero-icons {
-        width: 100%;
         justify-content: center;
         gap: 14px;
+    }
+
+    .hero-about {
+        width: 100%;
+    }
+
+    .ethics-layout,
+    .edu-layout {
+        grid-template-columns: 1fr;
     }
 
     .contact-methods {
@@ -584,22 +576,48 @@ body::before {
     .contact-title {
         font-size: clamp(2.2rem, 8vw, 3.2rem);
     }
-
-    .ethics-layout,
-    .edu-layout {
-        grid-template-columns: 1fr;
-    }
+}
+/* Reduce padding for every section EXCEPT the hero */
+.section {
+    padding-top: 5px !important;
 }
 
-/* Small tweaks for sections */
-#contact.section {
-    padding-top: 80px !important;
+/* Hero keeps its big spacing */
+#hero.section {
+    padding-top: 100px !important;
+}
+/* Clean rounded button style */
+.btn-rounded {
+    display: inline-block;
+    padding: 10px 22px;
+    background: #111;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-#ethics.section {
-    padding-top: 20px !important;
+.btn-rounded:hover {
+    background: #222;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+/* Default icon behavior (no crazy filters) */
+.contact-icon {
+    width: 22px;
+    height: 22px;
+    transition: 0.25s ease;
 }
 
-.ethics-layout {
-    margin-top: 20px !important;
+/* OUTLOOK – stay normal on hover */
+.contact-chip:hover img.contact-icon.outlook {
+    filter: none;
+    opacity: 0.9; /* tiny clean highlight */
+}
+
+/* LINKEDIN – turn proper LinkedIn blue on hover */
+.contact-chip:hover img.contact-icon.linkedin {
+    filter: brightness(0) saturate(100%) invert(29%) sepia(94%) saturate(2083%) hue-rotate(191deg);
 }
