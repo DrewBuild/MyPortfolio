@@ -24,6 +24,34 @@ body::before {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.25));
     z-index: -1;
 }
+body {
+  background-image: url('backk-min.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    background-size: cover;
+  }
+}
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+    padding: 20px;
+  }
+
+  nav a {
+    font-size: 18px;
+  }
+}
+
+
+
 
 /* NAVBAR */
 .navbar {
