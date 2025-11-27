@@ -5,29 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Drew J. | Portfolio</title>
 
+    <!-- Open Graph (link preview) -->
+    <meta property="og:title" content="Drew Jones | Portfolio" />
+    <meta property="og:description" content="Software Development • Networking • CIS Student • DII Runner" />
+    <meta property="og:image" content="linkimg.png" />
+    <meta property="og:url" content="https://yourdomain.com" />
+    <meta property="og:type" content="website" />
+
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+        rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<!-- SOCIAL PREVIEW IMAGE -->
-<meta property="og:title" content="Drew Jones | Portfolio">
-<meta property="og:description" content="Software Development • Networking • CIS Student • D2 Runner">
-<meta property="og:image" content="linkimg.png">
-<meta property="og:url" content="https://yourdomain.com">
-<meta property="og:type" content="website">
-
     <!-- NAVBAR -->
     <header class="navbar">
-        <!-- Left: Logo / Name (acts as Home) -->
         <div class="nav-left">
             <a href="#hero" class="logo-link">
                 <h1 class="logo">Drew Jones</h1>
             </a>
         </div>
 
-        <!-- Center: Navigation Links -->
         <nav class="nav-links">
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
@@ -35,78 +36,79 @@
             <a href="#my-swu-journey">Athletics/Academics</a>
         </nav>
 
-        <!-- Right: Contact Me Button -->
         <a href="#contact" class="contact-nav-btn">Contact Me</a>
     </header>
 
     <main>
-
         <!-- HERO -->
         <section id="hero" class="section hero">
             <div class="hero-layout">
-                <!-- LEFT SIDE: PFP + ICON ROW -->
+                <!-- LEFT SIDE -->
                 <div class="hero-left-block fade-in">
                     <img src="pfpdrew.png" alt="Drew Jones" class="profile-pic" />
 
                     <div class="hero-icons">
-                        <a href="Drew_Jones_Resume.pdf"
-                           target="_blank"
-                           class="hero-icon-link hero-icon-resume"
-                           aria-label="View Resume">
+                        <a
+                            href="Drew_Jones_Resume.pdf"
+                            target="_blank"
+                            class="hero-icon-link hero-icon-resume"
+                            aria-label="View Resume"
+                        >
                             <img src="resumelogo.png" alt="Resume" class="hero-icon-img" />
                         </a>
 
-                        <a href="https://github.com/DrewCodes03"
-                           target="_blank"
-                           class="hero-icon-link hero-icon-github"
-                           aria-label="GitHub">
+                        <a
+                            href="https://github.com/DrewCodes03"
+                            target="_blank"
+                            class="hero-icon-link hero-icon-github"
+                            aria-label="GitHub"
+                        >
                             <img src="githublogo.png" alt="GitHub" class="hero-icon-img" />
                         </a>
 
-                        <a href="https://www.linkedin.com/in/drew-jones-5a0233301/"
-                           target="_blank"
-                           class="hero-icon-link hero-icon-linkedin"
-                           aria-label="LinkedIn">
+                        <a
+                            href="https://www.linkedin.com/in/drew-jones-5a0233301/"
+                            target="_blank"
+                            class="hero-icon-link hero-icon-linkedin"
+                            aria-label="LinkedIn"
+                        >
                             <img src="linkedinlogo.svg" alt="LinkedIn" class="hero-icon-img" />
                         </a>
                     </div>
                 </div>
 
-                <!-- RIGHT SIDE: ABOUT ME TEXT -->
+                <!-- RIGHT SIDE -->
                 <div class="hero-about card fade-in">
-                    <h2>About Drew</h2>
+    <h2>About Drew</h2>
 
-                    <p class="about-text">
-                        I am a Computer Information Systems student at Southern Wesleyan with a strong commitment to using
-                        technology to solve problems and improve systems. My academic work focuses on software development, data
-                        management, and process improvement, and I’m motivated by building solutions that are dependable and genuinely helpful.
-                    </p>
+    <p class="about-text">
+        I’m a Computer Information Systems student at Southern Wesleyan who enjoys using technology to solve real problems,
+        especially through software development, data management, and system improvement.
+    </p>
 
-                    <p class="about-text">
-                        Running D2 cross country and track has taught me discipline, consistency, and resilience. Those qualities guide
-                        how I work, learn, and handle pressure. I’ve also strengthened my leadership and communication skills through
-                        serving as a Residential Assistant at both SWU and BaylorTIP, where I supported students, managed responsibilities,
-                        and worked through challenging situations.
-                    </p>
+    <p class="about-text">
+        Competing in DII cross country and track has built my discipline, consistency, and resilience.
+        Serving as a Residential Assistant at SWU and BaylorTIP strengthened my leadership and communication skills.
+    </p>
 
-                    <p class="about-text">
-                        My values come from my Christian faith, which shapes how I treat people, approach challenges, and lead with integrity.
-                        Growing up in a family that fostered and adopted children taught me empathy, patience, and the importance of serving others.
-                        These values influence both my character and my work ethic.
-                    </p>
+    <p class="about-text">
+        My Christian faith and growing up in a foster and adoptive family taught me empathy, integrity,
+        and the importance of serving others. These values shape both my character and work ethic.
+    </p>
 
-                    <p class="about-text">
-                        I’m seeking opportunities in software development, IT operations, or data systems where I can contribute, grow,
-                        and uphold strong morals while working alongside teams who value honesty, hard work, and meaningful impact.
-                    </p>
-                </div>
+    <p class="about-text">
+        I’m looking for opportunities in software development, IT operations, or data systems where I can contribute,
+        grow, and work with teams that value honesty, hard work, and meaningful impact.
+    </p>
+</div>
+
             </div>
         </section>
- <!-- PROJECTS -->
+
+        <!-- PROJECTS -->
         <section id="projects" class="section">
             <h2 class="projects-title">My Projects</h2>
 
-            <!-- JustBeanIt project -->
             <a href="https://github.com/DrewBuild/JustBeanIt-MobileApp" target="_blank" class="project-link-wrapper">
                 <div class="project-card card fade-in tilt">
                     <h3>JustBeanIt – Mobile App</h3>
@@ -115,102 +117,77 @@
                         <span class="pill">Firebase</span>
                     </div>
                     <p>
-                        A mobile app for discovering and rating coffee shops. Built using
-                        SwiftUI and Firebase with authentication, Firestore data models, and
-                        a clean, user-friendly interface.
+                        A mobile app for discovering and rating coffee shops. Built using SwiftUI and Firebase with authentication,
+                        Firestore data models, and a clean, user-friendly interface.
                     </p>
                 </div>
             </a>
 
-            <!-- Networking & Systems Labs -->
-            <a href="https://github.com/DrewBuild/Network-System-Lab" target="_blank" class="project-link-wrapper">
-                <div class="project-card card fade-in tilt">
-                    <h3>Networking &amp; Systems Labs</h3>
-                    <div class="project-meta">
-                        <span class="pill">Networking</span>
-                        <span class="pill">Systems</span>
-                    </div>
-                    <p>
-                        Designed and configured subnets, VLANs, routing, and firewall
-                        policies in lab environments while using tools like ping and tracert
-                        to troubleshoot connectivity issues.
-                    </p>
-                </div>
-            </a>
-
-            <!-- Portfolio Website -->
             <a href="https://github.com/DrewBuild/MyPortfolio" target="_blank" class="project-link-wrapper">
                 <div class="project-card card fade-in tilt">
-                    <h3>Drews Portfolio Website</h3>
+                    <h3>Drew's Portfolio Website</h3>
                     <div class="project-meta">
                         <span class="pill">HTML</span>
                         <span class="pill">CSS</span>
                     </div>
                     <p>
-                        The site you are on right now, hand-coded as a personal portfolio to practice front-end
-                        structure and clean layout.
+                        The site you are on right now, hand-coded as a personal portfolio to practice front-end structure and clean layout.
                     </p>
                 </div>
             </a>
         </section>
 
-  <!-- SKILLS -->
-<section id="skills" class="section">
-    <h2 class="skills-title">Drew's Skills</h2>
+        <!-- SKILLS -->
+        <section id="skills" class="section">
+            <h2 class="skills-title">Drew's Skills</h2>
 
-    <div class="skills-grid">
+            <div class="skills-grid">
+                <div class="skill-card card fade-in tilt">
+                    <h3>Languages</h3>
+                    <div class="skill-icons">
+                        <img src="Csharp.png" alt="C#" class="skill-icon" />
+                        <img src="C++logo.png" alt="C++" class="skill-icon" />
+                        <img src="swift.png" alt="Swift" class="skill-icon" />
+                        <img src="htmllogo.png" alt="HTML" class="skill-icon" />
+                    </div>
+                </div>
 
-        <!-- LANGUAGES CARD WITH ICONS -->
-        <div class="skill-card card fade-in tilt">
-            <h3>Languages</h3>
-            <div class="skill-icons">
-                <img src="Csharp.png" alt="C#" class="skill-icon" />
-                <img src="C++logo.png" alt="C++" class="skill-icon" />
-                <img src="swift.png" alt="Swift" class="skill-icon" />
-                <img src="htmllogo.png" alt="HTML" class="skill-icon" />
+                <div class="skill-card card fade-in tilt">
+                    <h3>Tools &amp; Tech</h3>
+                    <ul>
+                        <li>Git &amp; GitHub (version control, branching, repo management)</li>
+                        <li>Xcode (SwiftUI development &amp; debugging)</li>
+                        <li>Firebase (Auth, Firestore, Storage)</li>
+                        <li>VMware / VirtualBox (virtual machines &amp; networking labs)</li>
+                        <li>Wireshark (traffic inspection &amp; packet analysis basics)</li>
+                        <li>Cisco Packet Tracer (routing &amp; topology simulations)</li>
+                        <li>SSH tools (remote access, secure connections)</li>
+                        <li>Google Cloud Foundations (cloud &amp; virtual networking basics)</li>
+                        <li>Lucidchart / Draw.io (network diagrams &amp; documentation)</li>
+                    </ul>
+                </div>
+
+                <div class="skill-card card fade-in tilt">
+                    <h3>Networking Skills</h3>
+                    <ul>
+                        <li>Subnetting &amp; IP configuration</li>
+                        <li>Routing &amp; switching fundamentals</li>
+                        <li>Ports, protocols &amp; OSI model</li>
+                        <li>Network security fundamentals</li>
+                        <li>Virtualization (VM networking)</li>
+                        <li>Network troubleshooting (ping, tracert, nslookup)</li>
+                        <li>Network topology, documentation &amp; diagrams</li>
+                        <li>Wireless security &amp; authentication</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-
-        <!-- TOOLS & TECH -->
-        <div class="skill-card card fade-in tilt">
-            <h3>Tools & Tech</h3>
-            <ul>
-                <li>Git & GitHub (version control, branching, repo management)</li>
-                <li>Xcode (SwiftUI development & debugging)</li>
-                <li>Firebase (Auth, Firestore, Storage)</li>
-                <li>VMware / VirtualBox (virtual machines & networking labs)</li>
-                <li>Wireshark (traffic inspection + packet analysis basics)</li>
-                <li>Cisco Packet Tracer (routing & topology simulations)</li>
-                <li>SSH Tools (remote access, secure connections)</li>
-                <li>Google Cloud Foundations (cloud & virtual networking basics)</li>
-                <li>Lucidchart / Draw.io (network diagrams & documentation)</li>
-            </ul>
-        </div>
-
-        <!-- NETWORKING SKILLS -->
-        <div class="skill-card card fade-in tilt">
-            <h3>Networking Skills</h3>
-            <ul>
-                <li>Subnetting & IP configuration</li>
-                <li>Routing & switching fundamentals</li>
-                <li>Ports, protocols & OSI model</li>
-                <li>Network security fundamentals</li>
-                <li>Virtualization (VM networking)</li>
-                <li>Network troubleshooting (ping, tracert, nslookup)</li>
-                <li>Network topology, documentation & diagrams</li>
-                <li>Wireless security & authentication</li>
-            </ul>
-        </div>
-
-    </div>
-</section>
+        </section>
 
         <!-- ETHICS -->
         <section id="ethics" class="section">
             <h2 class="ethics-title">Faith &amp; Ethics</h2>
 
             <div class="ethics-layout">
-                <!-- Core ethics card -->
                 <div class="card fade-in tilt ethics-main">
                     <h3>Christian Ethics in Technology</h3>
                     <p>
@@ -238,25 +215,23 @@
                     </div>
                 </div>
 
-                <!-- Ethics paper highlight -->
                 <div class="card fade-in tilt ethics-paper">
                     <h3>Ethics Paper from Coursework</h3>
                     <p>
-                        In one of my computer classes, I wrote a paper applying Christian principles to modern technology
-                        and data use. The paper explores how integrity, stewardship, and love for neighbor should shape
-                        decisions around privacy, security, and the impact of software on real people.
+                        In one of my computer classes, I wrote a paper applying Christian principles to modern technology and data use.
+                        The paper explores how integrity, stewardship, and love for neighbor should shape decisions around privacy,
+                        security, and the impact of software on real people.
                     </p>
                     <p>
-                        I connect biblical truth with practical questions developers and IT professionals face:
-                        when to say “no” to a solution that cuts corners, how to handle sensitive information,
-                        and why character matters as much as technical skill.
+                        I connect biblical truth with practical questions developers and IT professionals face: when to say “no” to a
+                        solution that cuts corners, how to handle sensitive information, and why character matters as much as
+                        technical skill.
                     </p>
 
-                    <a href="Drew_Jones_Ethics_Paper.pdf"
-                       target="_blank"
-                       class="ethics-paper-btn">
-                        Read my full ethics paper (PDF)
+                    <a href="Drew_Jones_Ethics_Paper.pdf" target="_blank" class="btn-rounded">
+                    Read Ethics Paper (PDF)
                     </a>
+
                 </div>
             </div>
         </section>
@@ -266,7 +241,6 @@
             <h2 class="edu-title">Athletics/Academics</h2>
 
             <div class="edu-layout">
-                <!-- LEFT: RUNNING PHOTOS + ATHLETICS -->
                 <div class="edu-column card fade-in tilt">
                     <h3>Running for Southern Wesleyan</h3>
 
@@ -286,40 +260,35 @@
                     </ul>
 
                     <a href="https://swuathletics.com/sports/mens-cross-country/roster/drew-jones/3930"
-                       target="_blank"
-                       class="ethics-paper-btn">
-                        View full athletic profile
-                    </a>
+                    target="_blank"
+                    class="btn-rounded">View Athletic Profile</a>
+
                 </div>
 
-                <!-- RIGHT: CAMPUS PHOTOS + EDUCATION -->
                 <div class="edu-column card fade-in tilt">
                     <h3>Academics at SWU</h3>
 
                     <div class="carousel carousel-right">
                         <img src="campus1.jpg" alt="SWU campus 1" class="carousel-img active" />
                         <img src="campus2.jpg" alt="SWU campus 2" class="carousel-img" />
-                        <img src="swutrack.jpg" alt="SWU campus 3" class="carousel-img" />
+                        <img src="swutrack.jpg" alt="SWU track" class="carousel-img" />
                         <img src="campus4.jpg" alt="SWU campus 4" class="carousel-img" />
                     </div>
 
                     <p class="edu-text">
-                        I’m studying Computer Information Systems at Southern Wesleyan University, balancing
-                        full-time academics with distance running. This section will highlight key courses,
-                        projects, and GPA once finalized.
+                        I’m studying Computer Information Systems at Southern Wesleyan University, balancing full-time academics with
+                        distance running. This section will highlight key courses, projects, and GPA once finalized.
                     </p>
 
                     <p class="edu-text">
-                        I’m especially focused on software development, networking, and systems, tying what I
-                        learn in class directly to real projects like this portfolio and mobile app work.
+                        I’m especially focused on software development, networking, and systems, tying what I learn in class directly to
+                        real projects like this portfolio and mobile app work.
                     </p>
 
-                    <!-- Replace this href with the real PDF when you have it -->
-                    <a href="SWU_Transcript.pdf"
-                       target="_blank"
-                       class="ethics-paper-btn">
-                        View academic transcript (PDF)
+                    <a href="swu transcript.pdf" target="_blank" class="btn-rounded">
+                    View Academic Transcript (PDF)
                     </a>
+
                 </div>
             </div>
         </section>
@@ -333,40 +302,29 @@
                 </p>
 
                 <div class="contact-methods">
-                    <!-- Email -->
                     <a href="mailto:DrewJ@drewbuilds.com" class="contact-chip">
-                        <img src="outlook.png" alt="Email" class="contact-icon" />
+                        <img src="outlook.png" alt="Email" class="contact-icon outlook">
                         <span>DrewJ@drewbuilds.com</span>
                     </a>
 
-                    <!-- LinkedIn -->
-                    <a href="https://www.linkedin.com/in/drew-jones-5a0233301/"
-                       target="_blank"
-                       class="contact-chip">
-                        <img src="linkedinlogo.svg" alt="LinkedIn" class="contact-icon" />
+                    <a
+                        href="https://www.linkedin.com/in/drew-jones-5a0233301/"
+                        target="_blank"
+                        class="contact-chip"
+                    >
+                        <img src="linkedinlogo.svg" alt="LinkedIn" class="contact-icon linkedin">
                         <span>Connect on LinkedIn</span>
                     </a>
-
- <!-- Phone: Call -->
-        <a 
-        href="sms:18139929392" class="contact-chip"
-        href="tel:18139929392" class="contact-chip"
-        >
-             <span>Call/Text: (813) 992-9392</span>
-        </a>
+                </div>
             </div>
         </section>
-
     </main>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <p>© <span id="year"></span> Drew Jones</p>
     </footer>
 
-    <!-- Scripts: year, active nav, fade-in, carousels -->
     <script>
-        // footer year
         document.getElementById("year").textContent = new Date().getFullYear();
 
         const sections = document.querySelectorAll("main section");
@@ -374,7 +332,6 @@
         const logoLink = document.querySelector(".logo-link");
         const fadeEls = document.querySelectorAll(".fade-in");
 
-        // Click "Drew Jones" -> scroll to top smoothly
         if (logoLink) {
             logoLink.addEventListener("click", (e) => {
                 e.preventDefault();
@@ -392,7 +349,6 @@
                 }
             });
 
-            // nav links
             navLinks.forEach((a) => {
                 a.classList.remove("active");
                 if (a.getAttribute("href") === `#${current}`) {
@@ -400,7 +356,6 @@
                 }
             });
 
-            // "Drew Jones" highlight on home
             if (logoLink) {
                 if (current === "hero") {
                     logoLink.classList.add("active-logo");
@@ -419,7 +374,6 @@
             });
         }
 
-        // Simple dual-carousel auto-rotate
         function setupCarousel(selector) {
             const slides = document.querySelectorAll(selector);
             if (!slides.length) return null;
@@ -444,7 +398,6 @@
             updateActiveNav();
             handleFade();
 
-            // auto-rotate every 5 seconds
             setInterval(() => {
                 if (rotateLeft) rotateLeft();
                 if (rotateRight) rotateRight();
