@@ -17,7 +17,7 @@ body {
     min-height: 100vh;
 
     /* Fallback color */
-    background: #2A2E35;
+    background-color: #2A2E35;
 }
 
 /* Remove overlay */
