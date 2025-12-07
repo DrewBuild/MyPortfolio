@@ -17,14 +17,7 @@ body {
     min-height: 100vh;
 
     /* Fallback color */
-    background-color: #2A2E35;
-
-    /* Background image */
-    background-image: url("backk-min.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    background: #2A2E35;
 }
 
 /* Remove overlay */
