@@ -15,9 +15,12 @@ body {
     font-family: "Poppins", system-ui, Arial, sans-serif;
     color: #111;
     min-height: 100vh;
-
-    /* Fallback color */
-    background-color: #2A2E35;
+   background-image: url('backk-min.jpg');
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 /* Remove overlay */
