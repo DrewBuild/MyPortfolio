@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+
     /* =====================================
        HERO BLOB PARALLAX
        - Mouse-based movement
@@ -35,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         blob.style.transform = `translate(${x}px, ${y}px)`;
     });
+
 
     /* =====================================
        TYPING EFFECT (HOME PAGE)
