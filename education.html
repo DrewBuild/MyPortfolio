@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ===============================
+         META / HEAD CONFIG
+    ================================ -->
+    <link rel="icon" type="image/png" href="../Icons/logopt3.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Education & Athletics | Drew</title>
+
+    <link rel="stylesheet" href="../CSS-JS/style.css" />
+</head>
+
+<body class="theme-red">
+
+<!-- ===============================
+     BRAND LOGO
+================================ -->
+<a href="index.html" class="brand-left">
+    <img src="../Icons/logopt3.png" class="brand-logo" alt="Logo">
+</a>
+
+<!-- ===============================
+     CONTACT BUTTON
+================================ -->
+<a href="contact.html" class="brand-right">Contact Me</a>
+
+<!-- ===============================
+     NAVIGATION
+================================ -->
+<nav class="glass-nav">
+    <a href="projects.html">PROJECTS</a>
+    <a href="skills.html">SKILLS</a>
+    <a href="ethics.html">ETHICS</a>
+    <a href="education.html" class="active">EDUCATION</a>
+</nav>
+
+<!-- ===============================
+     IMAGE RIBBON (AUTO SLIDESHOW)
+================================ -->
+<section class="edu-ribbon">
+    <div class="edu-ribbon-track">
+        <img src="../photos/1.jpg" class="edu-slide active" alt="Photo 1">
+        <img src="../photos/3.jpg" class="edu-slide" alt="Photo 3">
+        <img src="../photos/4.jpg" class="edu-slide" alt="Photo 4">
+        <img src="../photos/6.jpg" class="edu-slide" alt="Photo 6">
+    </div>
+</section>
+
+<!-- ===============================
+     HERO TEXT
+================================ -->
+<section class="education-hero">
+    <h1>EDUCATION</h1>
+    <h1>& ATHLETICS</h1>
+    <p>Discipline in the classroom. Execution under pressure.</p>
+</section>
+
+<!-- ===============================
+     SPLIT CONTENT
+================================ -->
+<section class="edu-split">
+
+    <!-- ACADEMICS -->
+    <div class="edu-card">
+        <h2>Southern Wesleyan University</h2>
+        <p class="edu-sub">Computer Information Systems</p>
+        <p>
+            Focused on software development, networking, and systems design.
+            Emphasis on applying theory directly to real-world constraints.
+        </p>
+
+        <a
+            href="../links/Drew_Jones_Major_Minor_Classes.pdf"
+            target="_blank"
+            class="edu-button"
+        >
+            View Major & Minor Coursework
+        </a>
+    </div>
+
+    <!-- ATHLETICS -->
+    <div class="edu-card">
+        <h2>NCAA Division II Athlete</h2>
+        <p>
+            Balancing high-volume training with full-time academics requires
+            consistency, accountability, and elite time management.
+        </p>
+
+        <a
+            href="https://swuathletics.com/sports/mens-cross-country/roster/drew-jones/3930"
+            target="_blank"
+            class="athletic-button"
+        >
+            View Athletic Profile
+        </a>
+    </div>
+
+</section>
+
+<!-- ===============================
+     SLIDESHOW SCRIPT
+================================ -->
+<script>
+    const slides = document.querySelectorAll('.edu-slide');
+    let currentSlide = 0;
+
+    setInterval(() => {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }, 5000);
+</script>
+
+<script src="../CSS-JS/script.js"></script>
+</body>
+</html>
