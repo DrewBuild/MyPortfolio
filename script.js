@@ -5,7 +5,6 @@
    - No external dependencies
 ========================================================= */
 
-
 document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================
@@ -20,7 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
             scrollIndicator.classList.add("hide");
         }
     });
-
 
     /* =====================================
        HERO BLOB PARALLAX
@@ -37,7 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         blob.style.transform = `translate(${x}px, ${y}px)`;
     });
-
 
     /* =====================================
        TYPING EFFECT (HOME PAGE)
@@ -79,3 +76,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     typeLoop();
 });
+
