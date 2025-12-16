@@ -1419,6 +1419,25 @@ body.theme-contact {
     }
 }
 
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: clamp(4.5rem, 14vw, 6rem);
+        letter-spacing: 4px;
+        line-height: 1;
+        text-align: center;
+    }
+}
+@media (max-width: 600px) {
+    .linkedin-float {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+
+        margin: 40px auto 0;
+        width: 220px;
+    }
+}
 
 /* ---------- FLOATING ELEMENT SAFETY ---------- */
 @media (max-width: 900px) {
