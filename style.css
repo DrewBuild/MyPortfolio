@@ -197,8 +197,6 @@ body.theme-contact {
     align-items: center;
 }
 
-
-
 .hero-center {
     text-align: center;
     z-index: 2;
@@ -646,7 +644,12 @@ body.scroll-locked {
     box-shadow: 0 16px 40px rgba(0,0,0,0.35);
 }
 
-
+/* MOBILE */
+@media (max-width: 900px) {
+    .ethics-grid {
+        grid-template-columns: 1fr;
+    }
+}
 /* ===============================
    EDUCATION & ATHLETICS PAGE
 ================================ */
@@ -853,7 +856,20 @@ body.scroll-locked {
     color: rgba(255,255,255,0.8);
 }
 
+/* MOBILE */
+@media (max-width: 900px) {
+    .edu-split {
+        grid-template-columns: 1fr;
+    }
 
+    .edu-slideshow {
+        height: 340px;
+    }
+
+    .athletic-button {
+        align-self: center;
+    }
+}
 
 
 /* ===============================
@@ -1023,6 +1039,7 @@ body.theme-contact {
 
 
 
+
 .project-title {
     font-size: 3.4rem;
     font-weight: 900;
@@ -1142,8 +1159,22 @@ body.theme-contact {
     100% { transform: translateY(0); }
 }
 
+/* Mobile safety */
+@media (max-width: 900px) {
+    .github-profile-feature {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 40px auto 0;
+    }
+}
 
 
+/* Mobile */
+@media (max-width: 768px) {
+    .project-page {
+        padding: 140px 20px 100px;
+    }
 
     .project-glass-card {
         padding: 36px;
