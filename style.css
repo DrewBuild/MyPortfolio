@@ -1168,14 +1168,24 @@ body.theme-contact {
         margin: 40px auto 0;
     }
 }
+/* MOBILE NAV SWITCH */
+@media (max-width: 768px) {
+  .glass-nav,
+  .brand-right {
+    display: none;
+  }
 
+  .hamburger {
+    display: flex;
+  }
+}
 
 /* Mobile */
 @media (max-width: 768px) {
     .project-page {
         padding: 140px 20px 100px;
     }
-
+}
     .project-glass-card {
         padding: 36px;
     }
@@ -1420,33 +1430,9 @@ body.theme-contact {
 }
 
 }
-@media (max-width: 768px) {
-  .glass-nav,
-  .brand-right {
-    display: none;
-  }
-}
-.hamburger {
-  display: none;
-}
 
-@media (max-width: 768px) {
-  .hamburger {
-    position: fixed;
-    top: 20px;
-    right: 24px;
-    z-index: 1001;
 
-    width: 36px;
-    height: 28px;
-    background: none;
-    border: none;
-    cursor: pointer;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
 
   .hamburger span {
     height: 3px;
@@ -1506,32 +1492,4 @@ body.theme-contact {
   }
 }
 
-/* ---------- FLOATING ELEMENT SAFETY ---------- */
-@media (max-width: 900px) {
 
-    /* LinkedIn float */
-    .linkedin-float {
-        position: relative;
-        top: auto;
-        right: auto;
-        transform: none;
-        margin: 60px auto 0;
-    }
-
-    /* GitHub float */
-    .github-float {
-        position: relative;
-        top: auto;
-        right: auto;
-        transform: none;
-        margin: 60px auto 0;
-    }
-
-    /* Resume float */
-    .resume-float {
-        position: relative;
-        top: auto;
-        right: auto;
-        margin: 60px auto 0;
-    }
-}
