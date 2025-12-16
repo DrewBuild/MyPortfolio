@@ -644,47 +644,6 @@ body.scroll-locked {
     box-shadow: 0 16px 40px rgba(0,0,0,0.35);
 }
 
-/* MOBILE */
-@media (max-width: 900px) {
-    .ethics-grid {
-        grid-template-columns: 1fr;
-    }
-}
-/* Hide toggle on desktop */
-.nav-toggle {
-  display: none;
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-/* Hide the nav by default on mobile */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: rgba(255,255,255,0.95);
-    width: 100%;
-    position: absolute;
-    top: 60px; /* adjust for your nav height */
-    left: 0;
-    text-align: center;
-  }
-
-  /* Show hamburger */
-  .nav-toggle {
-    display: block;
-  }
-
-  .nav-links a {
-    padding: 15px;
-    border-top: 1px solid #eee;
-  }
-}
-.nav-links.open {
-  display: flex;
-}
 
 /* ===============================
    EDUCATION & ATHLETICS PAGE
@@ -892,20 +851,7 @@ body.scroll-locked {
     color: rgba(255,255,255,0.8);
 }
 
-/* MOBILE */
-@media (max-width: 900px) {
-    .edu-split {
-        grid-template-columns: 1fr;
-    }
 
-    .edu-slideshow {
-        height: 340px;
-    }
-
-    .athletic-button {
-        align-self: center;
-    }
-}
 
 
 /* ===============================
@@ -1195,35 +1141,9 @@ body.theme-contact {
     100% { transform: translateY(0); }
 }
 
-/* Mobile safety */
-@media (max-width: 900px) {
-    .github-profile-feature {
-        position: relative;
-        top: auto;
-        right: auto;
-        margin: 40px auto 0;
-    }
-}
 
 
-/* Mobile */
-@media (max-width: 768px) {
-    .project-page {
-        padding: 140px 20px 100px;
-    }
 
-    .project-glass-card {
-        padding: 36px;
-    }
-
-    .project-nav-arrow {
-        display: none;
-    }
-
-    .project-screenshots img {
-        width: 180px;
-    }
-}
 /* ===============================
    SKILLS PAGE
 ================================ */
@@ -1356,14 +1276,45 @@ body.theme-contact {
     color: rgba(255,255,255,0.65);
     margin-top: 4px;
 }
+/* =====================================================
+   🔽🔽🔽 MOBILE NAV — APPENDED (ONLY ADDITION)
+===================================================== */
 
-/* MOBILE */
-@media (max-width: 900px) {
-    .skills-grid {
-        grid-template-columns: 1fr;
+/* Hide toggle on desktop */
+.nav-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+    .glass-nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 14px 20px;
     }
 
-    .skills-card.wide {
-        grid-column: span 1;
+    .nav-toggle {
+        display: block;
+        color: white;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 14px;
+        text-align: center;
     }
 }
