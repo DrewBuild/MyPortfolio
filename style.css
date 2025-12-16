@@ -1290,7 +1290,13 @@ body.theme-contact {
     margin-top: 4px;
 }
 
-  .ov-link {
-    font-size: 2rem;
-  }
+/* MOBILE */
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-card.wide {
+        grid-column: span 1;
+    }
 }
