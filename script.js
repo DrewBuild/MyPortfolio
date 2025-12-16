@@ -1,7 +1,6 @@
 /* =========================================================
    GLOBAL SCRIPT
    - Safe for Safari, Chrome, Mobile
-   - All DOM access guarded
    - No external dependencies
 ========================================================= */
 
@@ -9,23 +8,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* =====================================
        SCROLL INDICATOR
-       - Hides after slight scroll
-       - Mobile-safe (passive scroll)
     ===================================== */
     const scrollIndicator = document.querySelector(".scroll-indicator");
 
-    window.addEventListener("scroll", () => {
-        if (scrollIndicator && window.scrollY > 50) {
-            scrollIndicator.classList.add("hide");
-        }
-    }, { passive: true });
-
+    if (scrollIndicator) {
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 50) {
+                scrollIndicator.classList.add("hide");
+            }
+        }, { passive: true });
+    }
 
     /* =====================================
-       HERO BLOB PARALLAX
-       - Mouse-based movement
-       - Disabled on touch devices
-       - Safari-safe transform usage
+       HERO BLOB PARALLAX (DESKTOP ONLY)
     ===================================== */
     const blob = document.querySelector(".hero-blue");
 
@@ -37,11 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-
     /* =====================================
-       TYPING EFFECT (HOME PAGE)
-       - Looping type/delete animation
-       - Uses setTimeout for Safari compatibility
+       TYPING EFFECT
     ===================================== */
     const phrases = ["Drew Jones", "Greenville, SC", "DrewBuilds.com"];
     let currentPhrase = 0;
@@ -49,44 +41,46 @@ document.addEventListener("DOMContentLoaded", () => {
     let isDeleting = false;
 
     const textEl = document.getElementById("typing-text");
-    if (!textEl) return;
+    if (textEl) {
+        function typeLoop() {
+            const phrase = phrases[currentPhrase];
 
-    function typeLoop() {
-        const phrase = phrases[currentPhrase];
+            if (!isDeleting) {
+                textEl.textContent = phrase.substring(0, currentChar + 1);
+                currentChar++;
 
-        if (!isDeleting) {
-            textEl.textContent = phrase.substring(0, currentChar + 1);
-            currentChar++;
+                if (currentChar === phrase.length) {
+                    isDeleting = true;
+                    setTimeout(typeLoop, 2000);
+                    return;
+                }
+            } else {
+                textEl.textContent = phrase.substring(0, currentChar - 1);
+                currentChar--;
 
-            if (currentChar === phrase.length) {
-                isDeleting = true;
-                setTimeout(typeLoop, 2500);
-                return;
+                if (currentChar === 0) {
+                    isDeleting = false;
+                    currentPhrase = (currentPhrase + 1) % phrases.length;
+                }
             }
-        } else {
-            textEl.textContent = phrase.substring(0, currentChar - 1);
-            currentChar--;
 
-            if (currentChar === 0) {
-                isDeleting = false;
-                currentPhrase = (currentPhrase + 1) % phrases.length;
-            }
+            setTimeout(typeLoop, isDeleting ? 60 : 90);
         }
 
-        setTimeout(typeLoop, isDeleting ? 60 : 90);
+        typeLoop();
     }
 
-    typeLoop();
+    /* =====================================
+       MOBILE NAV TOGGLE
+    ===================================== */
+    const navToggle = document.querySelector(".nav-toggle");
+    const navLinks = document.querySelector(".nav-links");
 
+    if (navToggle && navLinks) {
+        navToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("open");
+            navToggle.classList.toggle("open");
+        });
+    }
 
-  const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
 });
-
-
-});
-
-
