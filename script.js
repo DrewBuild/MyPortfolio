@@ -18,24 +18,24 @@ document.addEventListener("DOMContentLoaded", () => {
         if (scrollIndicator && window.scrollY > 50) {
             scrollIndicator.classList.add("hide");
         }
-    });
+    }, { passive: true });
 
 
     /* =====================================
        HERO BLOB PARALLAX
        - Mouse-based movement
-       - Disabled automatically if blob not present
+       - Disabled on touch devices
        - Safari-safe transform usage
     ===================================== */
-    document.addEventListener("mousemove", (e) => {
-        const blob = document.querySelector(".hero-blue");
-        if (!blob) return;
+    const blob = document.querySelector(".hero-blue");
 
-        const x = (e.clientX - window.innerWidth / 2) * 0.02;
-        const y = (e.clientY - window.innerHeight / 2) * 0.02;
-
-        blob.style.transform = `translate(${x}px, ${y}px)`;
-    });
+    if (blob && !("ontouchstart" in window)) {
+        document.addEventListener("mousemove", (e) => {
+            const x = (e.clientX - window.innerWidth / 2) * 0.02;
+            const y = (e.clientY - window.innerHeight / 2) * 0.02;
+            blob.style.transform = `translate(${x}px, ${y}px)`;
+        });
+    }
 
 
     /* =====================================
@@ -77,14 +77,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     typeLoop();
-});
-const hamburger = document.querySelector(".hamburger");
-const mobileMenu = document.querySelector(".mobile-menu");
 
-if (hamburger && mobileMenu) {
-  hamburger.addEventListener("click", () => {
-    mobileMenu.classList.toggle("open");
-  });
-}
+
+    /* =====================================
+       MOBILE HAMBURGER MENU
+       - Runs AFTER DOM exists
+       - Mobile-only via CSS
+    ===================================== */
+    const hamburger = document.querySelector(".hamburger");
+    const mobileMenu = document.querySelector(".mobile-menu");
+
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener("click", () => {
+            mobileMenu.classList.toggle("open");
+        });
+
+        // Close menu when link is clicked (mobile UX sanity)
+        mobileMenu.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                mobileMenu.classList.remove("open");
+            });
+        });
+    }
+
+});
 
 
