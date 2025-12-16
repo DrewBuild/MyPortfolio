@@ -1421,7 +1421,7 @@ body.theme-contact {
 
 @media (max-width: 600px) {
     .hero-title {
-        font-size: clamp(4.5rem, 14vw, 6rem);
+        font-size: clamp(2rem, 7vw, 3rem);
         letter-spacing: 4px;
         line-height: 1;
         text-align: center;
@@ -1430,12 +1430,11 @@ body.theme-contact {
 @media (max-width: 600px) {
     .linkedin-float {
         position: relative;
+        margin: 40px auto 0;
+        width: 220px;
         top: auto;
         right: auto;
         transform: none;
-
-        margin: 40px auto 0;
-        width: 220px;
     }
 }
 
