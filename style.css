@@ -650,6 +650,42 @@ body.scroll-locked {
         grid-template-columns: 1fr;
     }
 }
+/* Hide toggle on desktop */
+.nav-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Hide the nav by default on mobile */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(255,255,255,0.95);
+    width: 100%;
+    position: absolute;
+    top: 60px; /* adjust for your nav height */
+    left: 0;
+    text-align: center;
+  }
+
+  /* Show hamburger */
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links a {
+    padding: 15px;
+    border-top: 1px solid #eee;
+  }
+}
+.nav-links.open {
+  display: flex;
+}
+
 /* ===============================
    EDUCATION & ATHLETICS PAGE
 ================================ */
