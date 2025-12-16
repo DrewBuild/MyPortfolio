@@ -1419,23 +1419,91 @@ body.theme-contact {
     }
 }
 
-@media (max-width: 600px) {
-    .hero-title {
-        font-size: clamp(2rem, 7vw, 3rem);
-        letter-spacing: 4px;
-        line-height: 1;
-        text-align: center;
-    }
 }
-@media (max-width: 600px) {
-    .linkedin-float {
-        position: relative;
-        margin: 40px auto 0;
-        width: 220px;
-        top: auto;
-        right: auto;
-        transform: none;
-    }
+@media (max-width: 768px) {
+  .glass-nav,
+  .brand-right {
+    display: none;
+  }
+}
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    z-index: 1001;
+
+    width: 36px;
+    height: 28px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .hamburger span {
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 4px;
+    transition: 0.3s ease;
+  }
+}
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 5, 15, 0.92);
+  backdrop-filter: blur(20px);
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu a {
+  font-size: 2rem;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  color: white;
+}
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+@media (max-width: 768px) {
+  .hero-center {
+    padding: 0 20px;
+  }
+
+  .overview-links {
+    align-items: center;
+  }
+
+  .ov-link {
+    font-size: clamp(2.4rem, 8vw, 3.4rem);
+    letter-spacing: 0.08em;
+  }
+}
+@media (max-width: 768px) {
+  .linkedin-float,
+  .github-float,
+  .resume-float {
+    display: none;
+  }
 }
 
 /* ---------- FLOATING ELEMENT SAFETY ---------- */
