@@ -79,26 +79,13 @@ document.addEventListener("DOMContentLoaded", () => {
     typeLoop();
 
 
-    /* =====================================
-       MOBILE HAMBURGER MENU
-       - Runs AFTER DOM exists
-       - Mobile-only via CSS
-    ===================================== */
-    const hamburger = document.querySelector(".hamburger");
-    const mobileMenu = document.querySelector(".mobile-menu");
+  const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-    if (hamburger && mobileMenu) {
-        hamburger.addEventListener("click", () => {
-            mobileMenu.classList.toggle("open");
-        });
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
 
-        // Close menu when link is clicked (mobile UX sanity)
-        mobileMenu.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", () => {
-                mobileMenu.classList.remove("open");
-            });
-        });
-    }
 
 });
 
