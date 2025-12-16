@@ -78,4 +78,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     typeLoop();
 });
+const hamburger = document.querySelector(".hamburger");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+if (hamburger && mobileMenu) {
+  hamburger.addEventListener("click", () => {
+    mobileMenu.classList.toggle("open");
+  });
+}
+
 
