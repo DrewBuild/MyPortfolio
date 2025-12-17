@@ -1353,3 +1353,47 @@ body.theme-contact {
     }
     .carousel-item { min-width: 100%; }
 }
+
+@media (max-width: 768px) {
+
+    .brand-left,
+    .brand-right {
+        position: relative;
+        margin: 6px 0;
+    }
+
+    .glass-nav {
+        position: relative;
+        top: 0;
+        flex-direction: column;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+        font-size: 1.8rem;
+    }
+
+    /* Disable floating icons on mobile */
+    .linkedin-float,
+    .github-profile-feature,
+    .resume-float {
+        display: none;
+    }
+
+    /* FIX PORTFOLIO SIZE */
+    .hero-title {
+        font-size: clamp(2.4rem, 10vw, 3.2rem);
+        text-align: center;
+        line-height: 1.1;
+    }
+}
