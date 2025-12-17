@@ -1350,35 +1350,44 @@ body.theme-contact {
 }
 
 @media (max-width: 900px) {
-    /* Navigation adjustments */
-    .glass-nav {
-        gap: 30px;
-        padding: 12px 24px;
-        font-size: 0.9rem;
+    /* Hide floating elements on mobile */
+    .linkedin-float,
+    .resume-float,
+    .github-profile-feature {
+        display: none !important;
     }
     
-    /* Brand logo */
-    .brand-left {
-        left: 20px;
+    /* Navigation adjustments - MORE ZOOMED OUT */
+    .glass-nav {
         top: 15px;
+        gap: 24px;
+        padding: 10px 20px;
+        font-size: 0.8rem;
+    }
+    
+    /* Brand logo - MORE ZOOMED OUT */
+    .brand-left {
+        left: 15px;
+        top: 12px;
+        padding: 6px 14px;
     }
     
     .brand-logo {
-        width: 40px;
+        width: 36px;
     }
     
-    /* Contact button */
+    /* Contact button - MORE ZOOMED OUT */
     .brand-right {
-        right: 20px;
-        top: 25px;
-        padding: 10px 20px;
-        font-size: 0.95rem;
+        right: 15px;
+        top: 20px;
+        padding: 8px 18px;
+        font-size: 0.85rem;
     }
     
     /* Hero section */
     .hero-title {
-        font-size: clamp(6rem, 18vw, 10rem);
-        letter-spacing: 6px;
+        font-size: clamp(4rem, 15vw, 8rem);
+        letter-spacing: 4px;
     }
     
     .hero-logo {
@@ -1392,35 +1401,6 @@ body.theme-contact {
     /* Overview links */
     .ov-link {
         font-size: clamp(3rem, 9vw, 5rem);
-    }
-    
-    /* Floating elements - reposition */
-    .linkedin-float {
-        position: relative;
-        width: 250px;
-        top: auto;
-        right: auto;
-        transform: none;
-        margin: 40px auto;
-        display: block;
-    }
-    
-    .resume-float {
-        position: relative;
-        width: 200px;
-        top: auto;
-        right: auto;
-        margin: 30px auto;
-        display: block;
-    }
-    
-    .github-profile-feature {
-        position: relative;
-        width: 180px;
-        top: auto;
-        right: auto;
-        margin: 30px auto 0;
-        display: block;
     }
     
     /* Tech stack icons */
@@ -1572,11 +1552,12 @@ body.theme-contact {
 }
 
 @media (max-width: 600px) {
-    /* Navigation - stack or hide */
+    /* Navigation - MORE COMPACT */
     .glass-nav {
-        gap: 20px;
-        padding: 10px 18px;
-        font-size: 0.75rem;
+        gap: 16px;
+        padding: 8px 14px;
+        font-size: 0.7rem;
+        top: 12px;
     }
     
     .glass-nav a {
@@ -1585,8 +1566,8 @@ body.theme-contact {
     
     /* Hero adjustments */
     .hero-title {
-        font-size: clamp(4rem, 16vw, 8rem);
-        letter-spacing: 4px;
+        font-size: clamp(3rem, 12vw, 6rem);
+        letter-spacing: 3px;
     }
     
     .hero-logo {
@@ -1603,21 +1584,22 @@ body.theme-contact {
         font-size: clamp(2.5rem, 8vw, 4rem);
     }
     
-    /* Brand adjustments */
+    /* Brand adjustments - CONSISTENT WITH INDEX */
     .brand-left {
-        left: 15px;
-        top: 12px;
+        left: 12px;
+        top: 10px;
+        padding: 5px 12px;
     }
     
     .brand-logo {
-        width: 36px;
+        width: 32px;
     }
     
     .brand-right {
-        right: 15px;
-        top: 20px;
-        padding: 8px 16px;
-        font-size: 0.85rem;
+        right: 12px;
+        top: 16px;
+        padding: 7px 14px;
+        font-size: 0.8rem;
     }
     
     /* Section spacing */
