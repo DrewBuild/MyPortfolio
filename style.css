@@ -1321,13 +1321,493 @@ body.theme-contact {
     margin-top: 4px;
 }
 
-/* MOBILE */
+/* ===============================
+   MOBILE RESPONSIVE STYLES
+   Add these to the end of style.css
+================================ */
+
+/* ===============================
+   TABLET & MOBILE BREAKPOINTS
+================================ */
+
+@media (max-width: 1200px) {
+    /* Adjust floating elements */
+    .linkedin-float {
+        width: 300px;
+        right: 3%;
+    }
+    
+    .resume-float {
+        width: 240px;
+        right: 100px;
+    }
+    
+    .github-profile-feature {
+        width: 180px;
+        right: 80px;
+        top: 120px;
+    }
+}
+
 @media (max-width: 900px) {
+    /* Navigation adjustments */
+    .glass-nav {
+        gap: 30px;
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+    
+    /* Brand logo */
+    .brand-left {
+        left: 20px;
+        top: 15px;
+    }
+    
+    .brand-logo {
+        width: 40px;
+    }
+    
+    /* Contact button */
+    .brand-right {
+        right: 20px;
+        top: 25px;
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+    
+    /* Hero section */
+    .hero-title {
+        font-size: clamp(6rem, 18vw, 10rem);
+        letter-spacing: 6px;
+    }
+    
+    .hero-logo {
+        width: 100px;
+    }
+    
+    .typing-container {
+        font-size: 1.6rem;
+    }
+    
+    /* Overview links */
+    .ov-link {
+        font-size: clamp(3rem, 9vw, 5rem);
+    }
+    
+    /* Floating elements - reposition */
+    .linkedin-float {
+        position: relative;
+        width: 250px;
+        top: auto;
+        right: auto;
+        transform: none;
+        margin: 40px auto;
+        display: block;
+    }
+    
+    .resume-float {
+        position: relative;
+        width: 200px;
+        top: auto;
+        right: auto;
+        margin: 30px auto;
+        display: block;
+    }
+    
+    .github-profile-feature {
+        position: relative;
+        width: 180px;
+        top: auto;
+        right: auto;
+        margin: 30px auto 0;
+        display: block;
+    }
+    
+    /* Tech stack icons */
+    .project-tech {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    
+    .tech-icon {
+        width: 70px;
+        height: 70px;
+    }
+    
+    /* Project wrapper */
+    .project-wrapper {
+        padding: 120px 20px 60px;
+    }
+    
+    .project-glass-card {
+        padding: 32px 24px;
+    }
+    
+    .project-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .project-title {
+        font-size: 2.4rem;
+    }
+    
+    /* Carousel */
+    .carousel-track {
+        gap: 16px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+    
+    .carousel-item {
+        scroll-snap-align: center;
+        flex-shrink: 0;
+    }
+    
+    .carousel-item img {
+        width: 200px;
+    }
+    
+    /* Contact page */
+    .contact-title {
+        font-size: clamp(3rem, 7vw, 5rem);
+        text-align: center;
+    }
+    
+    .contact-card {
+        padding: 32px 28px;
+    }
+    
+    .contact-subtext {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    
+    .contact-actions {
+        flex-direction: column;
+    }
+    
+    .contact-pill {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    /* Education ribbon */
+    .edu-ribbon {
+        margin-top: 100px;
+        max-height: 150px;
+    }
+    
+    .education-hero {
+        padding: 30px 6% 30px;
+        text-align: center;
+    }
+    
+    .education-hero h1 {
+        font-size: clamp(3.5rem, 9vw, 6rem);
+    }
+    
+    .education-hero p {
+        font-size: 1.3rem;
+    }
+    
+    .edu-split {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 60px 6%;
+    }
+    
+    .edu-card {
+        padding: 36px;
+    }
+    
+    /* Ethics page */
+    .ethics-page {
+        padding: 120px 6% 80px;
+        gap: 60px;
+    }
+    
+    .ethics-title {
+        font-size: clamp(4rem, 9vw, 6rem);
+    }
+    
+    .ethics-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .ethics-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .ethics-card {
+        padding: 32px;
+    }
+    
+    /* Skills page */
+    .skills-page {
+        padding: 120px 6% 80px;
+        gap: 60px;
+    }
+    
+    .skills-title {
+        font-size: clamp(4rem, 9vw, 6rem);
+    }
+    
     .skills-grid {
         grid-template-columns: 1fr;
+        gap: 32px;
     }
-
+    
     .skills-card.wide {
         grid-column: span 1;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Navigation - stack or hide */
+    .glass-nav {
+        gap: 20px;
+        padding: 10px 18px;
+        font-size: 0.75rem;
+    }
+    
+    .glass-nav a {
+        padding: 4px 2px;
+    }
+    
+    /* Hero adjustments */
+    .hero-title {
+        font-size: clamp(4rem, 16vw, 8rem);
+        letter-spacing: 4px;
+    }
+    
+    .hero-logo {
+        width: 80px;
+        margin-bottom: 20px;
+    }
+    
+    .typing-container {
+        font-size: 1.3rem;
+    }
+    
+    /* Overview links */
+    .ov-link {
+        font-size: clamp(2.5rem, 8vw, 4rem);
+    }
+    
+    /* Brand adjustments */
+    .brand-left {
+        left: 15px;
+        top: 12px;
+    }
+    
+    .brand-logo {
+        width: 36px;
+    }
+    
+    .brand-right {
+        right: 15px;
+        top: 20px;
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+    
+    /* Section spacing */
+    .page-section {
+        padding-top: 100px;
+    }
+    
+    /* Project page */
+    .project-wrapper {
+        padding: 100px 15px 50px;
+    }
+    
+    .project-glass-card {
+        padding: 24px 20px;
+    }
+    
+    .project-title {
+        font-size: 2rem;
+    }
+    
+    .project-description {
+        font-size: 1rem;
+    }
+    
+    .carousel-item img {
+        width: 160px;
+    }
+    
+    /* Contact page */
+    .contact-wrapper {
+        width: 95%;
+    }
+    
+    .contact-card {
+        padding: 24px 20px;
+    }
+    
+    .contact-subtext {
+        font-size: 1.1rem;
+    }
+    
+    .contact-pill {
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .contact-pill img {
+        width: 24px;
+    }
+    
+    .contact-pill img[alt="LinkedIn"],
+    .contact-pill img[alt="GitHub"] {
+        width: 42px;
+    }
+    
+    /* Education page */
+    .edu-ribbon {
+        margin-top: 90px;
+        max-height: 120px;
+    }
+    
+    .edu-card {
+        padding: 28px;
+    }
+    
+    .edu-card h2 {
+        font-size: 2rem;
+    }
+    
+    .edu-card p {
+        font-size: 1.1rem;
+    }
+    
+    /* Ethics page */
+    .ethics-page {
+        padding: 100px 5% 60px;
+    }
+    
+    .ethics-card {
+        padding: 28px;
+    }
+    
+    .ethics-card h2 {
+        font-size: 1.6rem;
+    }
+    
+    .ethics-card p {
+        font-size: 1rem;
+    }
+    
+    .ethics-statement p {
+        font-size: 1.1rem;
+    }
+    
+    .ethics-verse blockquote {
+        font-size: 1.3rem;
+    }
+    
+    /* Skills page */
+    .skills-page {
+        padding: 100px 5% 60px;
+    }
+    
+    .skills-card {
+        padding: 28px;
+    }
+    
+    .skills-card h2 {
+        font-size: 1.7rem;
+    }
+    
+    .skills-card li {
+        font-size: 1.05rem;
+    }
+    
+    /* Scroll indicator */
+    .scroll-indicator {
+        bottom: 20px;
+    }
+}
+
+/* ===============================
+   LANDSCAPE MOBILE FIX
+================================ */
+@media (max-width: 900px) and (orientation: landscape) {
+    .hero-section,
+    .hero-block {
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 20px 60px;
+    }
+    
+    .overview-links {
+        min-height: auto;
+        padding: 60px 20px;
+    }
+    
+    .education-hero {
+        min-height: auto;
+        padding: 60px 6%;
+    }
+}
+
+/* ===============================
+   TOUCH DEVICE OPTIMIZATIONS
+================================ */
+@media (hover: none) and (pointer: coarse) {
+    /* Remove hover effects on touch devices */
+    .ov-link:hover,
+    .carousel-item img:hover,
+    .contact-pill:hover,
+    .ethics-card:hover,
+    .skills-card:hover {
+        transform: none;
+    }
+    
+    /* Add active states instead */
+    .ov-link:active {
+        transform: translateX(5px);
+    }
+    
+    .contact-pill:active {
+        transform: translateY(-2px);
+    }
+    
+    /* Increase tap target sizes */
+    .glass-nav a {
+        padding: 8px 6px;
+    }
+    
+    .contact-pill {
+        min-height: 48px;
+    }
+}
+
+/* ===============================
+   PREVENT HORIZONTAL SCROLL
+================================ */
+@media (max-width: 900px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    * {
+        max-width: 100%;
+    }
+    
+    /* Fix carousel overflow */
+    .carousel-wrapper {
+        width: 100%;
+        overflow: hidden;
     }
 }
