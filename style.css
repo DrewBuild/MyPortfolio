@@ -1318,3 +1318,38 @@ body.theme-contact {
         text-align: center;
     }
 }
+
+/* ===============================
+   RESPONSIVE MEDIA QUERIES
+================================ */
+@media (max-width: 1024px) {
+    .edu-split, .skills-grid, .ethics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    html { font-size: 15px; }
+    .edu-split, .skills-grid, .ethics-grid { grid-template-columns: 1fr; }
+    .glass-nav {
+        flex-direction: column;
+        top: 80px;
+    }
+    .brand-left, .brand-right {
+        top: 0.75rem;
+    }
+    .education-hero h1 { font-size: 2rem; }
+    .education-hero p { font-size: 1rem; }
+    .carousel-item { min-width: 90%; }
+    .contact-actions { flex-direction: column; }
+}
+
+@media (max-width: 480px) {
+    html { font-size: 14px; }
+    .brand-logo { width: 40px; height: 40px; }
+    .education-hero h1 { font-size: 1.5rem; }
+    .edu-card, .skills-card, .ethics-card, .project-glass-card {
+        padding: 1rem;
+    }
+    .carousel-item { min-width: 100%; }
+}
