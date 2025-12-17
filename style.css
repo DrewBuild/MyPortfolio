@@ -1383,13 +1383,6 @@ body.theme-contact {
         font-size: 1.8rem;
     }
 
-    /* Disable floating icons on mobile */
-    .linkedin-float,
-    .github-profile-feature,
-    .resume-float {
-        display: none;
-    }
-
     /* FIX PORTFOLIO SIZE */
     .hero-title {
         font-size: clamp(2.4rem, 10vw, 3.2rem);
