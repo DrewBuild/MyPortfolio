@@ -644,7 +644,12 @@ body.scroll-locked {
     box-shadow: 0 16px 40px rgba(0,0,0,0.35);
 }
 
-
+/* MOBILE */
+@media (max-width: 900px) {
+    .ethics-grid {
+        grid-template-columns: 1fr;
+    }
+}
 /* ===============================
    EDUCATION & ATHLETICS PAGE
 ================================ */
@@ -851,7 +856,20 @@ body.scroll-locked {
     color: rgba(255,255,255,0.8);
 }
 
+/* MOBILE */
+@media (max-width: 900px) {
+    .edu-split {
+        grid-template-columns: 1fr;
+    }
 
+    .edu-slideshow {
+        height: 340px;
+    }
+
+    .athletic-button {
+        align-self: center;
+    }
+}
 
 
 /* ===============================
@@ -1141,9 +1159,35 @@ body.theme-contact {
     100% { transform: translateY(0); }
 }
 
+/* Mobile safety */
+@media (max-width: 900px) {
+    .github-profile-feature {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 40px auto 0;
+    }
+}
 
 
+/* Mobile */
+@media (max-width: 768px) {
+    .project-page {
+        padding: 140px 20px 100px;
+    }
 
+    .project-glass-card {
+        padding: 36px;
+    }
+
+    .project-nav-arrow {
+        display: none;
+    }
+
+    .project-screenshots img {
+        width: 180px;
+    }
+}
 /* ===============================
    SKILLS PAGE
 ================================ */
@@ -1276,117 +1320,14 @@ body.theme-contact {
     color: rgba(255,255,255,0.65);
     margin-top: 4px;
 }
-/* =====================================================
-   🔽🔽🔽 MOBILE NAV — APPENDED (ONLY ADDITION)
-===================================================== */
 
-/* Hide toggle on desktop */
-.nav-toggle {
-    display: none;
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-/* Mobile navigation */
-@media (max-width: 768px) {
-    .glass-nav {
-        flex-direction: column;
-        align-items: center;
-        padding: 14px 20px;
+/* MOBILE */
+@media (max-width: 900px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
 
-    .nav-toggle {
-        display: block;
-        color: white;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        margin-top: 12px;
-    }
-
-    .nav-links.open {
-        display: flex;
-    }
-
-    .nav-links a {
-        padding: 14px;
-        text-align: center;
-    }
-}
-
-/* ===============================
-   RESPONSIVE MEDIA QUERIES
-================================ */
-@media (max-width: 1024px) {
-    .edu-split, .skills-grid, .ethics-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    html { font-size: 15px; }
-    .edu-split, .skills-grid, .ethics-grid { grid-template-columns: 1fr; }
-    .glass-nav {
-        flex-direction: column;
-        top: 80px;
-    }
-    .brand-left, .brand-right {
-        top: 0.75rem;
-    }
-    .education-hero h1 { font-size: 2rem; }
-    .education-hero p { font-size: 1rem; }
-    .carousel-item { min-width: 90%; }
-    .contact-actions { flex-direction: column; }
-}
-
-@media (max-width: 480px) {
-    html { font-size: 14px; }
-    .brand-logo { width: 40px; height: 40px; }
-    .education-hero h1 { font-size: 1.5rem; }
-    .edu-card, .skills-card, .ethics-card, .project-glass-card {
-        padding: 1rem;
-    }
-    .carousel-item { min-width: 100%; }
-}
-
-@media (max-width: 768px) {
-
-    .brand-left,
-    .brand-right {
-        position: relative;
-        margin: 6px 0;
-    }
-
-    .glass-nav {
-        position: relative;
-        top: 0;
-        flex-direction: column;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .nav-links.open {
-        display: flex;
-    }
-
-    .nav-toggle {
-        display: block;
-        font-size: 1.8rem;
-    }
-
-    /* FIX PORTFOLIO SIZE */
-    .hero-title {
-        font-size: clamp(2.4rem, 10vw, 3.2rem);
-        text-align: center;
-        line-height: 1.1;
+    .skills-card.wide {
+        grid-column: span 1;
     }
 }
