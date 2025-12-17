@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="logopt3.png" type="image/png">
     <link rel="apple-touch-icon" href="logopt3.png">
     <title>Education & Athletics | Drew</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body class="theme-red">
 
-<!-- BRAND -->
 <a href="index.html" class="brand-left">
     <img src="logopt3.png" class="brand-logo" alt="Logo">
 </a>
 
-<!-- CONTACT BUTTON -->
 <a href="contact.html" class="brand-right">Contact Me</a>
 
-<!-- NAVIGATION -->
 <nav class="glass-nav">
-    <a href="project.html">PROJECT</a>
-    <a href="skills.html">SKILLS</a>
-    <a href="ethics.html">ETHICS</a>
-    <a href="education.html" class="active">EDUCATION</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <div class="nav-links">
+        <a href="project.html">PROJECT</a>
+        <a href="skills.html">SKILLS</a>
+        <a href="ethics.html">ETHICS</a>
+        <a href="education.html" class="active">EDUCATION</a>
+    </div>
 </nav>
 
-<!-- IMAGE SLIDESHOW -->
 <section class="edu-ribbon">
     <div class="edu-ribbon-track">
         <img src="1.jpg" class="edu-slide active" alt="Photo 1">
@@ -37,17 +36,14 @@
     </div>
 </section>
 
-<!-- HERO TEXT -->
 <section class="education-hero">
     <h1>EDUCATION</h1>
     <h1>& ATHLETICS</h1>
     <p>Discipline in the classroom. Execution under pressure.</p>
 </section>
 
-<!-- SPLIT CONTENT (STACKS ON MOBILE) -->
 <section class="edu-split">
 
-    <!-- ACADEMICS -->
     <div class="edu-card">
         <h2>Southern Wesleyan University</h2>
         <p class="edu-sub">Computer Information Systems</p>
@@ -56,16 +52,13 @@
             Emphasis on applying theory directly to real-world constraints.
         </p>
 
-        <a
-            href="Drew_Jones_Major_Minor_Classes.pdf"
-            target="_blank"
-            class="edu-button"
-        >
+        <a href="Drew_Jones_Major_Minor_Classes.pdf"
+           target="_blank"
+           class="edu-button">
             View Major & Minor Coursework
         </a>
     </div>
 
-    <!-- ATHLETICS -->
     <div class="edu-card">
         <h2>NCAA Division II Athlete</h2>
         <p>
@@ -73,18 +66,15 @@
             consistency, accountability, and elite time management.
         </p>
 
-        <a
-            href="https://swuathletics.com/sports/mens-cross-country/roster/drew-jones/3930"
-            target="_blank"
-            class="athletic-button"
-        >
+        <a href="https://swuathletics.com/sports/mens-cross-country/roster/drew-jones/3930"
+           target="_blank"
+           class="athletic-button">
             View Athletic Profile
         </a>
     </div>
 
 </section>
 
-<!-- SLIDESHOW SCRIPT -->
 <script>
     const slides = document.querySelectorAll('.edu-slide');
     let currentSlide = 0;
