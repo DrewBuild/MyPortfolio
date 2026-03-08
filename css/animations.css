@@ -1,0 +1,11 @@
+@keyframes fadeInHero{from{opacity:0;transform:translateY(25px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+@keyframes floatBlob{0%{transform:translate(-180px,-120px) scale(1);}50%{transform:translate(200px,80px) scale(1.15);}100%{transform:translate(-200px,120px) scale(.95);}}
+@keyframes wheelScroll{0%{opacity:1;transform:translateX(-50%) translateY(0);}100%{opacity:0;transform:translateX(-50%) translateY(12px);}}
+@keyframes blink{0%,50%{opacity:1;}51%,100%{opacity:0;}}
+@keyframes contactGradient{0%{background-position:0% 50%;}50%{background-position:100% 50%;}100%{background-position:0% 50%;}}
+@keyframes linkedinFloat{0%{transform:translateY(-50%) translateY(0);}50%{transform:translateY(-50%) translateY(-18px);}100%{transform:translateY(-50%) translateY(0);}}
+@keyframes githubFloat{0%{transform:translateY(-50%) translateY(0);}50%{transform:translateY(-50%) translateY(-18px);}100%{transform:translateY(-50%) translateY(0);}}
+@keyframes floaty{0%{transform:translateY(-50%);}50%{transform:translateY(calc(-50% - 12px));}100%{transform:translateY(-50%);}}
+@keyframes githubFloaty{0%{transform:translateY(0);}50%{transform:translateY(-14px);}100%{transform:translateY(0);}}
+@keyframes floatTech{0%{transform:translateY(0);}50%{transform:translateY(-8px);}100%{transform:translateY(0);}}

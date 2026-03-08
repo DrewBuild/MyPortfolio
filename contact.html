@@ -1,100 +1,90 @@
+<!-- =========================================================
+SCREEN: Contact Page
+NAME: Drew Jones
+PROJECT: Personal Portfolio
+========================================================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ===============================
-         META / HEAD CONFIG
-    ================================ -->
-    <link rel="icon" type="image/png" href="logopt3.png">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | Drew</title>
-
-    <link rel="stylesheet" href="style.css" />
+<!-- =========================================================
+META DATA
+========================================================= -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Drew Builds</title>
+<link rel="icon" type="image/png" href="images/logos/djlogo.png">
+<!-- =========================================================
+STYLES
+Modular CSS system
+========================================================= -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="css/contact.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
 </head>
-
 <body class="theme-contact">
-
-<!-- ===============================
-     BRAND LOGO
-================================ -->
+<div id="top"></div>
+<!-- =========================================================
+COMPONENT: Brand Logo
+========================================================= -->
 <a href="index.html" class="brand-left">
-    <img src="logopt3.png" class="brand-logo" alt="Logo">
+<img src="images/logos/djlogo.png" class="brand-logo" alt="Drew Logo">
 </a>
-
-<!-- ===============================
-     CONTACT BUTTON (ACTIVE PAGE)
-================================ -->
+<!-- =========================================================
+COMPONENT: Contact Button (Active Page)
+========================================================= -->
 <a href="contact.html" class="brand-right">Contact Me</a>
-
-<!-- ===============================
-     NAVIGATION
-================================ -->
+<!-- =========================================================
+COMPONENT: Navigation
+========================================================= -->
 <nav class="glass-nav">
-    <a href="projects.html">PROJECTS</a>
-    <a href="skills.html">SKILLS</a>
-    <a href="ethics.html">ETHICS</a>
-    <a href="education.html">EDUCATION</a>
+<a href="projects.html">PROJECTS</a>
+<a href="skills.html">SKILLS</a>
+<a href="ethics.html">ETHICS</a>
+<a href="education.html">EDUCATION</a>
 </nav>
-
-<!-- ===============================
-     CONTACT CONTENT
-================================ -->
+<!-- =========================================================
+SECTION: Contact Content
+========================================================= -->
 <section class="page-section contact-section">
-    <div class="contact-wrapper">
-
-        <h1 class="contact-title">CONTACT DREW!</h1>
-
-        <div class="contact-card">
-            <p class="contact-subtext">
-                Feel free to reach out about roles, projects,
-                or opportunities in software, IT, or systems engineering.
-            </p>
-
-            <!-- ACTION BUTTONS -->
-            <div class="contact-actions">
-
-                <!-- EMAIL -->
-                <a href="mailto:DrewJ@drewbuilds.com" class="contact-pill">
-                    <img src="outlook.png" alt="Email">
-                    <span>DrewJ@drewbuilds.com</span>
-                </a>
-
-                <!-- LINKEDIN -->
-                <a
-                    href="https://www.linkedin.com/in/drew-jones-5a0233301/"
-                    target="_blank"
-                    class="contact-pill"
-                >
-                    <img src="linkedinlogo.svg" alt="LinkedIn">
-                    <span>Connect on LinkedIn</span>
-                </a>
-
-                <!-- GITHUB -->
-                <a
-                    href="https://github.com/DrewBuild"
-                    target="_blank"
-                    class="contact-pill"
-                >
-                    <img src="githublogo.png" alt="GitHub">
-                    <span>View GitHub</span>
-                </a>
-
-                <!-- RESUME -->
-                <a
-                    href="final_resume.pdf"
-                    target="_blank"
-                    class="contact-pill"
-                >
-                    <img src="resumelogo.png" alt="Resume">
-                    <span>View Resume</span>
-                </a>
-
-            </div>
-        </div>
-
-    </div>
+<div class="contact-wrapper">
+<h1 class="contact-title">CONNECT WITH DREW!</h1>
+<div class="contact-card">
+<p class="contact-subtext">
+Feel free to reach out about roles, projects, or opportunities in software, IT, or systems engineering.
+</p>
+<!-- =========================================================
+CONTACT ACTIONS
+========================================================= -->
+<div class="contact-actions">
+<!-- EMAIL -->
+<a href="mailto:DrewJ@drewbuilds.com" class="contact-pill">
+<img src="images/icons/outlookicon.png" alt="Email">
+<span>DrewJ@drewbuilds.com</span>
+</a>
+<!-- LINKEDIN -->
+<a href="https://www.linkedin.com/in/drew-jones-5a0233301/" target="_blank" class="contact-pill">
+<img src="images/icons/linkedinicon.svg" alt="LinkedIn">
+<span>Connect on LinkedIn</span>
+</a>
+<!-- GITHUB -->
+<a href="https://github.com/DrewBuild" target="_blank" class="contact-pill">
+<img src="images/icons/githubicon.png" alt="GitHub">
+<span>View GitHub</span>
+</a>
+<!-- RESUME -->
+<a href="docs/Resume.pdf" target="_blank" class="contact-pill">
+<img src="images/icons/resumeicon.png" alt="Resume">
+<span>View Resume</span>
+</a>
+</div>
+</div>
+</div>
 </section>
-
-<script src="script.js"></script>
+<!-- =========================================================
+SCRIPTS
+========================================================= -->
+<script src="js/script.js"></script>
 </body>
 </html>

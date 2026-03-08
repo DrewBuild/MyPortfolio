@@ -1,108 +1,133 @@
+<!-- =========================================================
+SCREEN: Home Page
+NAME: Drew Jones
+PROJECT: Personal Portfolio
+========================================================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <!-- Open Graph / Social Preview -->
-     <link rel="icon" type="image/png" href="logopt3.png">
-    <title>Drew Builds | Portfolio</title>
-    <meta name="description" content="Drew Jones • Greenville, SC • Software Devolper">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://drewbuilds.com/">
-    <meta property="og:title" content="Drew Builds | Portfolio">
-    <meta property="og:description" content="Drew Jones • Greenville, SC • Software Devolper">
-    <meta property="og:image" content="https://drewbuilds.com/portfolioss.png">
-
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:image" content="https://drewbuilds.com/og-preview.png">
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
-  
-    <!-- Global Styles -->
-    <link rel="stylesheet" href="style.css" />
+<!-- =========================================================
+META DATA
+Purpose: SEO + social previews + favicon
+========================================================= -->
+<meta charset="UTF-8">
+<title>Drew Builds | Portfolio</title>
+<meta name="description" content="Drew Jones • Greenville, SC • Software Developer">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://drewbuilds.com/">
+<meta property="og:title" content="Drew Builds | Portfolio">
+<meta property="og:description" content="Drew Jones • Greenville, SC • Software Developer">
+<meta property="og:image" content="https://drewbuilds.com/images/pic/portfolioss.png">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:image" content="https://drewbuilds.com/images/pic/portfolioss.png">
+<link rel="icon" type="image/png" href="images/logos/djlogo.png">
+<!-- =========================================================
+STYLES
+Modular CSS system
+========================================================= -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
 </head>
-
 <body class="theme-hero">
 <div id="top"></div>
-
-<!-- ===============================
-     BRAND LOGO (TOP LEFT)
-================================ -->
+<!-- =========================================================
+COMPONENT: Brand Logo (Top Left)
+========================================================= -->
 <a href="index.html" class="brand-left active-home">
-    <img src="logopt3.png" alt="Drew Logo" class="brand-logo">
+    <img
+        src="images/logos/djlogo.png"
+        alt="Drew Logo"
+        class="brand-logo">
 </a>
 
-<!-- ===============================
-     CONTACT BUTTON (GLOBAL CTA)
-================================ -->
-<a href="contact.html" class="brand-right">Contact Me</a>
-
-<!-- ===============================
-     MAIN NAVIGATION
-================================ -->
+<!-- =========================================================
+COMPONENT: Contact Button
+========================================================= -->
+<a href="contact.html" class="brand-right">
+Contact Me
+</a>
+<!-- =========================================================
+COMPONENT: Main Navigation
+========================================================= -->
 <nav class="glass-nav">
-    <a href="projects.html">PROJECTS</a>
-    <a href="skills.html">SKILLS</a>
-    <a href="ethics.html">ETHICS</a>
-    <a href="education.html">EDUCATION</a>
+<a href="projects.html">PROJECTS</a>
+<a href="skills.html">SKILLS</a>
+<a href="ethics.html">ETHICS</a>
+<a href="education.html">EDUCATION</a>
 </nav>
-
-<!-- ===============================
-     HERO / OVERVIEW SECTION
-     - Scroll snap enabled
-     - Two-screen layout
-================================ -->
+<!-- =========================================================
+SECTION: HERO + OVERVIEW
+========================================================= -->
 <section id="hero-about" class="hero-about-section theme">
-
-    <!-- ---------- SCREEN 1: HERO ---------- -->
-    <div class="hero-block">
-        <div class="hero-blob hero-blue"></div>
-
-        <div class="hero-center">
-            <img src="logopt3.png" class="hero-logo" alt="Logo">
-
-            <!-- Typing Effect -->
-            <div class="typing-container">
-                <span id="typing-text"></span><span class="cursor">|</span>
-            </div>
-
-            <h1 class="hero-title">PORTFOLIO</h1>
-        </div>
-    </div>
-
-    <!-- ---------- SCREEN 2: OVERVIEW LINKS ---------- -->
-    <div class="overview-links">
-        <a href="projects.html" class="ov-link ov-project">01 PROJECTS</a>
-        <a href="skills.html" class="ov-link ov-skills">02 SKILLS</a>
-        <a href="ethics.html" class="ov-link ov-ethics">03 ETHICS</a>
-        <a href="education.html" class="ov-link ov-athletics">04 EDUCATION</a>
-        <a href="contact.html" class="ov-link ov-contact">05 CONTACT</a>
-    </div>
-
-    <!-- ---------- FLOATING LINKEDIN FEATURE ---------- -->
-    <a
-        href="https://www.linkedin.com/in/drew-jones-5a0233301/"
-        target="_blank"
-        class="linkedin-float"
-        aria-label="Visit my LinkedIn profile"
-    >
-        <img src="icon.png" alt="LinkedIn Profile" />
-    </a>
-
-</section>
-
-<!-- ===============================
-     SCROLL INDICATOR
-     - Hidden automatically on scroll
-================================ -->
-<div class="scroll-indicator">
-    <div class="mouse">
-        <span class="wheel"></span>
-    </div>
-    <span class="scroll-text">Scroll</span>
+<!-- =========================================================
+BLOCK: HERO DISPLAY
+Logo + animated typing + title
+========================================================= -->
+<div class="hero-block">
+<div class="hero-blob hero-blue"></div>
+<div class="hero-center">
+<img
+src="images/logos/djlogo.png"
+class="hero-logo"
+alt="Drew Builds Logo">
+<!-- Typing Animation -->
+<div class="typing-container">
+<span id="typing-text"></span>
+<span class="cursor">|</span>
 </div>
-
-<!-- Global Scripts -->
-<script src="script.js"></script>
+<h1 class="hero-title">PORTFOLIO</h1>
+</div>
+</div>
+<!-- =========================================================
+BLOCK: OVERVIEW LINKS
+Quick navigation to key portfolio sections
+========================================================= -->
+<div class="overview-links">
+<a href="projects.html" class="ov-link ov-project">
+01 PROJECTS
+</a>
+<a href="skills.html" class="ov-link ov-skills">
+02 SKILLS
+</a>
+<a href="ethics.html" class="ov-link ov-ethics">
+03 ETHICS
+</a>
+<a href="education.html" class="ov-link ov-athletics">
+04 EDUCATION
+</a>
+<a href="contact.html" class="ov-link ov-contact">
+05 CONTACT
+</a>
+</div>
+<!-- =========================================================
+COMPONENT: LinkedIn Floating Button
+========================================================= -->
+<a
+href="https://www.linkedin.com/in/drew-jones-5a0233301/"
+target="_blank"
+class="linkedin-float"
+aria-label="Visit my LinkedIn profile">
+<img
+src="images/icons/linkedinicon2.png"
+alt="LinkedIn Profile">
+</a>
+</section>
+<!-- =========================================================
+COMPONENT: Scroll Indicator
+========================================================= -->
+<div class="scroll-indicator">
+<div class="mouse">
+<span class="wheel"></span>
+</div>
+<span class="scroll-text">Scroll</span>
+</div>
+<!-- =========================================================
+SCRIPTS
+Global JavaScript file for interactions
+========================================================= -->
+<script src="js/script.js"></script>
 </body>
-
 </html>

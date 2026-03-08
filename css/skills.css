@@ -1,0 +1,203 @@
+/* ===============================
+SKILLS PAGE CONTAINER
+================================ */
+
+.skills-page{
+min-height:100vh;
+padding:140px 8% 120px;
+display:flex;
+flex-direction:column;
+gap:90px;
+}
+
+/* ===============================
+HERO SECTION
+================================ */
+
+.skills-hero{
+max-width:900px;
+}
+
+.skills-title{
+font-size:clamp(5rem,10vw,7rem);
+font-weight:800;
+letter-spacing:.1em;
+color:#ffe974;
+}
+
+.skills-subtitle{
+margin-top:18px;
+font-size:1.35rem;
+color:rgba(255,233,116,.75);
+max-width:720px;
+line-height:1.5;
+}
+
+/* ===============================
+RESUME HERO FLOAT
+================================ */
+
+.resume-float{
+position:absolute;
+right:8%;
+top:50px;
+width:400px;
+height:400px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+animation:resumeFloat 6s ease-in-out infinite;
+
+transition:transform .25s ease, filter .25s ease;
+
+z-index:20;
+}
+
+.resume-float img{
+width:100%;
+height:100%;
+object-fit:contain;
+}
+
+/* hover glow */
+
+.resume-float:hover{
+transform:scale(1.08);
+filter:drop-shadow(0 0 25px rgba(255,233,116,.9));
+}
+
+/* floating animation */
+
+@keyframes resumeFloat{
+0%{transform:translateY(0px);}
+50%{transform:translateY(-12px);}
+100%{transform:translateY(0px);}
+}
+/* ===============================
+SKILLS GRID
+================================ */
+
+.skills-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:50px;
+}
+
+/* ===============================
+SKILLS CARD
+================================ */
+
+.skills-card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(18px) saturate(160%);
+-webkit-backdrop-filter:blur(18px) saturate(160%);
+border-radius:28px;
+padding:44px 50px;
+
+box-shadow:
+0 30px 80px rgba(0,0,0,.35),
+inset 0 1px 0 rgba(255,255,255,.25);
+
+border:1px solid rgba(255,233,116,.18);
+
+transition:
+transform .35s ease,
+box-shadow .35s ease;
+}
+
+/* hover lift */
+
+.skills-card:hover{
+transform:translateY(-10px);
+box-shadow:
+0 45px 120px rgba(0,0,0,.45),
+inset 0 1px 0 rgba(255,255,255,.35);
+}
+
+/* ===============================
+WIDE CARD
+================================ */
+
+.skills-card.wide{
+grid-column:span 2;
+}
+
+/* ===============================
+CARD HEADERS
+================================ */
+
+.skills-card h2{
+font-size:2.1rem;
+font-weight:700;
+letter-spacing:.08em;
+margin-bottom:28px;
+color:#ffe974;
+}
+
+/* ===============================
+LIST STRUCTURE
+================================ */
+
+.skills-card ul{
+list-style:none;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+
+.skills-card li{
+font-size:1.15rem;
+line-height:1.6;
+color:rgba(255,255,255,.92);
+}
+
+/* highlighted skill */
+
+.skills-card li span{
+font-weight:600;
+color:#ffe974;
+}
+
+/* description */
+
+.skills-card li em{
+display:block;
+font-style:normal;
+font-size:.95rem;
+color:rgba(255,255,255,.65);
+margin-top:4px;
+}
+
+/* ===============================
+RESPONSIVE
+================================ */
+
+@media (max-width:1000px){
+
+.skills-grid{
+grid-template-columns:1fr;
+}
+
+.skills-card.wide{
+grid-column:span 1;
+}
+
+}
+
+@media (max-width:600px){
+
+.skills-title{
+font-size:4rem;
+}
+
+.skills-subtitle{
+font-size:1.15rem;
+}
+
+.skills-card{
+padding:36px 32px;
+}
+
+}

@@ -1,0 +1,65 @@
+/* ===============================
+   HERO SECTION
+================================ */
+.hero-section,.hero-block{height:100vh;position:relative;display:flex;justify-content:center;align-items:center;}
+.hero-center{text-align:center;z-index:2;opacity:0;animation:fadeInHero 1.6s ease forwards;}
+.hero-logo{width:130px;filter:brightness(0) invert(1);margin-bottom:30px;}
+.hero-title{font-size:clamp(8rem,20vw,12rem);letter-spacing:10px;font-weight:600;color:#d08aff;}
+
+/* ===============================
+   HERO SCROLL SNAP
+================================ */
+.hero-about-section{scroll-snap-type:y mandatory;}
+.hero-block,.overview-links{scroll-snap-align:start;min-height:100vh;display:flex;flex-direction:column;justify-content:center;}
+
+/* ===============================
+   HERO BACKGROUND BLOBS
+================================ */
+.hero-blob{position:absolute;width:400px;height:400px;border-radius:50%;filter:blur(10px);opacity:.65;animation:floatBlob 16s ease-in-out infinite alternate;}
+.hero-blue{background:radial-gradient(circle,#4aa8ff,#003e7a);}
+
+/* ===============================
+   HERO TYPING EFFECT
+================================ */
+.typing-container{font-size:2.2rem;white-space:nowrap;}
+.cursor{margin-left:4px;animation:blink .7s infinite;}
+
+/* ===============================
+   SCROLL INDICATOR
+================================ */
+.scroll-indicator{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:.8;animation:fadeIn 1.5s ease forwards;transition:opacity .4s ease,transform .4s ease;}
+.scroll-indicator.hide{opacity:0;transform:translate(-50%,10px);pointer-events:none;}
+.scroll-text{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;opacity:.7;}
+.mouse{width:22px;height:36px;border:2px solid rgba(255,255,255,.6);border-radius:12px;position:relative;}
+.wheel{position:absolute;top:6px;left:50%;transform:translateX(-50%);width:4px;height:6px;background:rgba(255,255,255,.6);border-radius:2px;animation:wheelScroll 1.5s infinite;}
+
+/* ===============================
+   HERO OVERVIEW LINKS
+================================ */
+.overview-links{display:flex;flex-direction:column;align-items:flex-start;gap:16px;}
+.ov-link{text-decoration:none;font-size:clamp(4rem,10vw,6rem);font-weight:600;letter-spacing:.12em;transition:transform .25s ease;}
+.ov-link:hover{transform:translateX(10px);}
+.ov-project{color:#ff9d3b;}
+.ov-skills{color:#ffe974;}
+.ov-ethics{color:#7aff90;}
+.ov-athletics{color:#ff7070;}
+.ov-contact{color:#7fb4ff;}
+
+/* ===============================
+   FLOATING LINKEDIN ICON
+================================ */
+.linkedin-float{position:absolute;right:5%;top:155%;transform:translateY(-50%);width:400px;display:flex;justify-content:center;align-items:center;animation:linkedinFloat 6s ease-in-out infinite;z-index:5;}
+.linkedin-float img{width:100%;height:auto;transition:transform .35s ease;}
+.linkedin-float:hover img{transform:translateY(-6px) scale(1.02);}
+
+/* ===============================
+   LINKEDIN FIXED IMAGE
+================================ */
+.about-linkedin-img{position:fixed;left:40px;top:50%;transform:translateY(-50%);width:300px;z-index:10;animation:floaty 6s ease-in-out infinite;}
+
+/* ===============================
+   FLOATING GITHUB ICON
+================================ */
+.github-float{position:absolute;left:5%;top:50%;transform:translateY(-50%);width:450px;display:flex;justify-content:center;align-items:center;animation:githubFloat 6s ease-in-out infinite;z-index:5;}
+.github-float img{width:100%;height:auto;transition:transform .35s ease;}
+.github-float:hover img{transform:translateY(-6px) scale(1.02);}

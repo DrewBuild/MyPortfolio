@@ -1,118 +1,111 @@
+<!-- =========================================================
+SCREEN: Education Page
+NAME: Drew Jones
+PROJECT: Personal Portfolio
+========================================================= -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ===============================
-         META / HEAD CONFIG
-    ================================ -->
-    <link rel="icon" type="image/png" href="logopt3.png">
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Education & Athletics | Drew</title>
-
-    <link rel="stylesheet" href="style.css" />
+<!-- =========================================================
+META DATA
+========================================================= -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education & Athletics | Drew Builds</title>
+<link rel="icon" type="image/png" href="images/logos/djlogo.png">
+<!-- =========================================================
+STYLES
+Modular CSS system
+========================================================= -->
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/navigation.css">
+<link rel="stylesheet" href="css/education.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
 </head>
-
 <body class="theme-red">
-
-<!-- ===============================
-     BRAND LOGO
-================================ -->
+<div id="top"></div>
+<!-- =========================================================
+COMPONENT: Brand Logo
+========================================================= -->
 <a href="index.html" class="brand-left">
-    <img src="logopt3.png" class="brand-logo" alt="Logo">
+<img src="images/logos/djlogo.png" class="brand-logo" alt="Drew Logo">
 </a>
-
-<!-- ===============================
-     CONTACT BUTTON
-================================ -->
+<!-- =========================================================
+COMPONENT: Contact Button
+========================================================= -->
 <a href="contact.html" class="brand-right">Contact Me</a>
-
-<!-- ===============================
-     NAVIGATION
-================================ -->
+<!-- =========================================================
+COMPONENT: Navigation
+========================================================= -->
 <nav class="glass-nav">
-    <a href="projects.html">PROJECTS</a>
-    <a href="skills.html">SKILLS</a>
-    <a href="ethics.html">ETHICS</a>
-    <a href="education.html" class="active">EDUCATION</a>
+<a href="projects.html">PROJECTS</a>
+<a href="skills.html">SKILLS</a>
+<a href="ethics.html">ETHICS</a>
+<a href="education.html" class="active">EDUCATION</a>
 </nav>
-
-<!-- ===============================
-     IMAGE RIBBON (AUTO SLIDESHOW)
-================================ -->
+<!-- =========================================================
+SECTION: Image Ribbon Slideshow
+========================================================= -->
 <section class="edu-ribbon">
-    <div class="edu-ribbon-track">
-        <img src="1.jpg" class="edu-slide active" alt="Photo 1">
-        <img src="3.jpg" class="edu-slide" alt="Photo 3">
-        <img src="4.jpg" class="edu-slide" alt="Photo 4">
-        <img src="6.jpg" class="edu-slide" alt="Photo 6">
-    </div>
+<div class="edu-ribbon-track">
+<img src="images/pic/pic1.jpg" class="edu-slide active" alt="Photo 1">
+<img src="images/pic/pic2.jpg" class="edu-slide" alt="Photo 2">
+<img src="images/pic/pic3.jpg" class="edu-slide" alt="Photo 3">
+<img src="images/pic/pic4.jpg" class="edu-slide" alt="Photo 4">
+</div>
 </section>
-
-<!-- ===============================
-     HERO TEXT
-================================ -->
+<!-- =========================================================
+SECTION: Hero Text
+========================================================= -->
 <section class="education-hero">
-    <h1>EDUCATION</h1>
-    <h1>& ATHLETICS</h1>
-    <p>Discipline in the classroom. Execution under pressure.</p>
+<h1>EDUCATION</h1>
+<h1>& ATHLETICS</h1>
+<p>Discipline in the classroom. Execution under pressure.</p>
 </section>
-
-<!-- ===============================
-     SPLIT CONTENT
-================================ -->
+<!-- =========================================================
+SECTION: Education + Athletics Cards
+========================================================= -->
 <section class="edu-split">
-
-    <!-- ACADEMICS -->
-    <div class="edu-card">
-        <h2>Southern Wesleyan University</h2>
-        <p class="edu-sub">Computer Information Systems</p>
-        <p>
-            Focused on software development, networking, and systems design.
-            Emphasis on applying theory directly to real-world constraints.
-        </p>
-
-        <a
-            href="mailto:DrewJ@drewbuilds.com""
-            target="_blank"
-            class="edu-button"
-        >
-            Request Transcript
-        </a>
-    </div>
-
-    <!-- ATHLETICS -->
-    <div class="edu-card">
-        <h2>NCAA Division II Athlete</h2>
-        <p>
-            Balancing high-volume training with full-time academics requires
-            consistency, accountability, and elite time management.
-        </p>
-
-        <a
-            href="https://swuathletics.com/sports/mens-cross-country/roster/drew-jones/3930"
-            target="_blank"
-            class="athletic-button"
-        >
-            View Athletic Profile
-        </a>
-    </div>
-
+<!-- ACADEMICS -->
+<div class="edu-card">
+<h2>Southern Wesleyan University</h2>
+<p class="edu-sub">Computer Information Systems</p>
+<p>
+Focused on software development, networking, and systems design.
+Emphasis on applying theory directly to real-world constraints.
+</p>
+<a href="mailto:DrewJ@drewbuilds.com" target="_blank" class="edu-button">
+Request Transcript
+</a>
+</div>
+<!-- ATHLETICS -->
+<div class="edu-card">
+<h2>NCAA Division II Athlete</h2>
+<p>
+Balancing high-volume training with full-time academics requires
+consistency, accountability, and elite time management.
+</p>
+<a href="https://swuathletics.com/sports/mens-cross-country/roster/drew-jones/3930" target="_blank" class="athletic-button">
+View Athletic Profile
+</a>
+</div>
 </section>
-
-<!-- ===============================
-     SLIDESHOW SCRIPT
-================================ -->
+<!-- =========================================================
+SCRIPT: Slideshow
+========================================================= -->
 <script>
-    const slides = document.querySelectorAll('.edu-slide');
-    let currentSlide = 0;
-
-    setInterval(() => {
-        slides[currentSlide].classList.remove('active');
-        currentSlide = (currentSlide + 1) % slides.length;
-        slides[currentSlide].classList.add('active');
-    }, 5000);
+const slides=document.querySelectorAll('.edu-slide');
+let currentSlide=0;
+setInterval(()=>{
+slides[currentSlide].classList.remove('active');
+currentSlide=(currentSlide+1)%slides.length;
+slides[currentSlide].classList.add('active');
+},5000);
 </script>
-
-<script src="script.js"></script>
+<!-- =========================================================
+GLOBAL SCRIPT
+========================================================= -->
+<script src="js/script.js"></script>
 </body>
 </html>
