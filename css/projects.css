@@ -28,12 +28,76 @@ gap:36px;
 position:relative;
 }
 
-/* ===============================
-PURPLE PROJECT CARD
-================================ */
+/* =====================================================
+CAREERFLOW PROJECT FIXES
+===================================================== */
+
+
+/* header layout */
+
+.project-header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:20px;
+flex-wrap:wrap;
+}
+
+/* logo */
+
+.project-icon-large{
+height:60px;
+width:auto;
+object-fit:contain;
+margin-right:10px;
+}
+
+/* title spacing */
+
+.project-title-block{
+display:flex;
+flex-direction:column;
+}
+
+/* tech icons */
+
+.project-tech{
+display:flex;
+gap:12px;
+align-items:center;
+}
+
+/* screenshot section */
+
+.careerflow-preview{
+display:flex;
+justify-content:center;
+align-items:center;
+margin-top:40px;
+}
+
+/* large screenshot */
+
+.careerflow-image img{
+width:520px;
+max-width:95%;
+border-radius:18px;
+box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+
+/* demo button */
+
+.demo-link{
+display:block;
+margin-top:30px;
+font-weight:600;
+text-align:left;
+}
+
+/* card background */
 
 .purple-card{
-background:rgba(98,43,122,.55);
+background:rgba(98,43,122,.65);
 }
 
 /* ===============================
