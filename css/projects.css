@@ -28,73 +28,9 @@ gap:36px;
 position:relative;
 }
 
-/* =====================================================
-CAREERFLOW PROJECT FIXES
-===================================================== */
-
-
-/* header layout */
-
-.project-header{
-display:flex;
-align-items:center;
-justify-content:space-between;
-gap:20px;
-flex-wrap:wrap;
-}
-
-/* logo */
-
-.project-icon-large{
-height:60px;
-width:auto;
-object-fit:contain;
-margin-right:10px;
-}
-
-/* title spacing */
-
-.project-title-block{
-display:flex;
-flex-direction:column;
-}
-
-/* tech icons */
-
-.project-tech{
-display:flex;
-gap:12px;
-align-items:center;
-}
-
-/* screenshot section */
-
-.careerflow-preview{
-display:flex;
-justify-content:center;
-align-items:center;
-margin-top:40px;
-}
-
-/* large screenshot */
-
-.careerflow-image img{
-width:520px;
-max-width:95%;
-border-radius:18px;
-box-shadow:0 20px 60px rgba(0,0,0,.5);
-}
-
-/* demo button */
-
-.demo-link{
-display:block;
-margin-top:30px;
-font-weight:600;
-text-align:left;
-}
-
-/* card background */
+/* ===============================
+CAREERFLOW CARD COLOR
+================================ */
 
 .purple-card{
 background:rgba(98,43,122,.65);
@@ -107,13 +43,25 @@ HEADER
 .project-header{
 display:flex;
 align-items:center;
-gap:28px;
+gap:24px;
+flex-wrap:wrap;
 }
+
+/* ===============================
+LOGOS
+================================ */
 
 .project-icon{
 width:72px;
 height:72px;
 border-radius:18px;
+object-fit:contain;
+}
+
+.project-icon-large{
+height:70px;
+width:auto;
+object-fit:contain;
 }
 
 /* ===============================
@@ -124,6 +72,12 @@ TITLE
 font-size:3.4rem;
 font-weight:900;
 line-height:1;
+}
+
+.project-title-block{
+display:flex;
+flex-direction:column;
+gap:6px;
 }
 
 /* ===============================
@@ -170,7 +124,6 @@ animation:floatTech 6s ease-in-out infinite;
 width:100%;
 }
 
-
 /* ===============================
 DESCRIPTION
 ================================ */
@@ -183,7 +136,7 @@ color:rgba(255,255,255,.9);
 }
 
 /* ===============================
-CAROUSEL
+CAROUSEL (Just Bean It)
 ================================ */
 
 .carousel-wrapper{
@@ -201,4 +154,31 @@ padding:12px;
 width:230px;
 border-radius:22px;
 box-shadow:0 20px 50px rgba(0,0,0,.5);
+}
+
+/* ===============================
+CAREERFLOW PREVIEW
+================================ */
+
+.careerflow-preview{
+display:flex;
+justify-content:center;
+margin-top:40px;
+}
+
+.careerflow-image img{
+width:600px;
+max-width:95%;
+border-radius:20px;
+box-shadow:0 25px 70px rgba(0,0,0,.55);
+}
+
+/* ===============================
+DEMO BUTTON
+================================ */
+
+.demo-link{
+display:block;
+margin-top:30px;
+font-weight:600;
 }
