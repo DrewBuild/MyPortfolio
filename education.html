@@ -13,6 +13,7 @@ META DATA
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Education & Athletics | Drew Builds</title>
 <link rel="icon" type="image/png" href="images/logos/djlogo.png">
+
 <!-- =========================================================
 STYLES
 Modular CSS system
@@ -23,86 +24,119 @@ Modular CSS system
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body class="theme-red">
 <div id="top"></div>
+
 <!-- =========================================================
 COMPONENT: Brand Logo
 ========================================================= -->
 <a href="index.html" class="brand-left">
-<img src="images/logos/djlogo.png" class="brand-logo" alt="Drew Logo">
+  <img src="images/logos/djlogo.png" class="brand-logo" alt="Drew Logo">
 </a>
+
 <!-- =========================================================
-COMPONENT: Contact Button
+COMPONENT: Contact Button (Desktop)
 ========================================================= -->
 <a href="contact.html" class="brand-right">Contact Me</a>
+
 <!-- =========================================================
-COMPONENT: Navigation
+COMPONENT: Navigation (Desktop)
 ========================================================= -->
 <nav class="glass-nav">
-<a href="projects.html">PROJECTS</a>
-<a href="skills.html">SKILLS</a>
-<a href="ethics.html">ETHICS</a>
-<a href="education.html" class="active">EDUCATION</a>
+  <a href="projects.html">PROJECTS</a>
+  <a href="skills.html">SKILLS</a>
+  <a href="ethics.html">ETHICS</a>
+  <a href="education.html" class="active">EDUCATION</a>
 </nav>
+
+<!-- =========================================================
+COMPONENT: Mobile Menu Toggle
+========================================================= -->
+<button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+  <span></span>
+  <span></span>
+</button>
+
+<!-- =========================================================
+COMPONENT: Mobile Menu
+========================================================= -->
+<nav class="mobile-menu" id="mobile-menu">
+  <a href="index.html">HOME</a>
+  <a href="projects.html">PROJECTS</a>
+  <a href="skills.html">SKILLS</a>
+  <a href="ethics.html">ETHICS</a>
+  <a href="education.html" class="active">EDUCATION</a>
+  <a href="contact.html">CONTACT</a>
+</nav>
+
 <!-- =========================================================
 SECTION: Image Ribbon Slideshow
 ========================================================= -->
 <section class="edu-ribbon">
-<div class="edu-ribbon-track">
-<img src="images/pic/pic1.jpg" class="edu-slide active" alt="Photo 1">
-<img src="images/pic/pic2.jpg" class="edu-slide" alt="Photo 2">
-<img src="images/pic/pic3.jpg" class="edu-slide" alt="Photo 3">
-<img src="images/pic/pic4.jpg" class="edu-slide" alt="Photo 4">
-</div>
+  <div class="edu-ribbon-track">
+    <img src="images/pic/pic1.jpg" class="edu-slide active" alt="Photo 1">
+    <img src="images/pic/pic2.jpg" class="edu-slide" alt="Photo 2">
+    <img src="images/pic/pic3.jpg" class="edu-slide" alt="Photo 3">
+    <img src="images/pic/pic4.jpg" class="edu-slide" alt="Photo 4">
+  </div>
 </section>
+
 <!-- =========================================================
 SECTION: Hero Text
 ========================================================= -->
 <section class="education-hero">
-<h1>EDUCATION</h1>
-<h1>& ATHLETICS</h1>
-<p>Discipline in the classroom. Execution under pressure.</p>
+  <h1>EDUCATION</h1>
+  <h1>& ATHLETICS</h1>
+  <p>Discipline in the classroom. Execution under pressure.</p>
 </section>
+
 <!-- =========================================================
 SECTION: Education + Athletics Cards
 ========================================================= -->
 <section class="edu-split">
-<!-- ACADEMICS -->
-<div class="edu-card">
-<h2>Southern Wesleyan University</h2>
-<p class="edu-sub">Computer Information Systems</p>
-<p>
-Focused on software development, networking, and systems design.
-Emphasis on applying theory directly to real-world constraints.
-</p>
-<a href="mailto:DrewJ@drewbuilds.com" target="_blank" class="edu-button">
-Request Transcript
-</a>
-</div>
-<!-- ATHLETICS -->
-<div class="edu-card">
-<h2>NCAA Division II Athlete</h2>
-<p>
-Balancing high-volume training with full-time academics requires
-consistency, accountability, and elite time management.
-</p>
-<a href="https://swuathletics.com/sports/mens-cross-country/roster/drew-jones/3930" target="_blank" class="athletic-button">
-View Athletic Profile
-</a>
-</div>
+
+  <!-- ACADEMICS -->
+  <div class="edu-card">
+    <h2>Southern Wesleyan University</h2>
+    <p class="edu-sub">Computer Information Systems</p>
+    <p>
+      Focused on software development, networking, and systems design.
+      Emphasis on applying theory directly to real-world constraints.
+    </p>
+    <a href="mailto:DrewJ@drewbuilds.com" target="_blank" class="edu-button">
+      Request Transcript
+    </a>
+  </div>
+
+  <!-- ATHLETICS -->
+  <div class="edu-card">
+    <h2>NCAA Division II Athlete</h2>
+    <p>
+      Balancing high-volume training with full-time academics requires
+      consistency, accountability, and elite time management.
+    </p>
+    <a href="https://swuathletics.com/sports/mens-cross-country/roster/drew-jones/3930" target="_blank" class="athletic-button">
+      View Athletic Profile
+    </a>
+  </div>
+
 </section>
+
 <!-- =========================================================
 SCRIPT: Slideshow
 ========================================================= -->
 <script>
-const slides=document.querySelectorAll('.edu-slide');
-let currentSlide=0;
-setInterval(()=>{
-slides[currentSlide].classList.remove('active');
-currentSlide=(currentSlide+1)%slides.length;
-slides[currentSlide].classList.add('active');
-},5000);
+const slides = document.querySelectorAll('.edu-slide');
+let currentSlide = 0;
+
+setInterval(() => {
+  slides[currentSlide].classList.remove('active');
+  currentSlide = (currentSlide + 1) % slides.length;
+  slides[currentSlide].classList.add('active');
+}, 5000);
 </script>
+
 <!-- =========================================================
 GLOBAL SCRIPT
 ========================================================= -->

@@ -13,6 +13,7 @@ META DATA
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Drew Builds</title>
 <link rel="icon" type="image/png" href="images/logos/djlogo.png">
+
 <!-- =========================================================
 STYLES
 Modular CSS system
@@ -23,65 +24,98 @@ Modular CSS system
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body class="theme-contact">
 <div id="top"></div>
+
 <!-- =========================================================
 COMPONENT: Brand Logo
 ========================================================= -->
 <a href="index.html" class="brand-left">
-<img src="images/logos/djlogo.png" class="brand-logo" alt="Drew Logo">
+  <img src="images/logos/djlogo.png" class="brand-logo" alt="Drew Logo">
 </a>
+
 <!-- =========================================================
-COMPONENT: Contact Button (Active Page)
+COMPONENT: Contact Button (Desktop)
 ========================================================= -->
 <a href="contact.html" class="brand-right">Contact Me</a>
+
 <!-- =========================================================
-COMPONENT: Navigation
+COMPONENT: Navigation (Desktop)
 ========================================================= -->
 <nav class="glass-nav">
-<a href="projects.html">PROJECTS</a>
-<a href="skills.html">SKILLS</a>
-<a href="ethics.html">ETHICS</a>
-<a href="education.html">EDUCATION</a>
+  <a href="projects.html">PROJECTS</a>
+  <a href="skills.html">SKILLS</a>
+  <a href="ethics.html">ETHICS</a>
+  <a href="education.html">EDUCATION</a>
 </nav>
+
+<!-- =========================================================
+COMPONENT: Mobile Menu Toggle
+========================================================= -->
+<button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+  <span></span>
+  <span></span>
+</button>
+
+<!-- =========================================================
+COMPONENT: Mobile Menu
+========================================================= -->
+<nav class="mobile-menu" id="mobile-menu">
+  <a href="index.html">HOME</a>
+  <a href="projects.html">PROJECTS</a>
+  <a href="skills.html">SKILLS</a>
+  <a href="ethics.html">ETHICS</a>
+  <a href="education.html">EDUCATION</a>
+  <a href="contact.html" class="active">CONTACT</a>
+</nav>
+
 <!-- =========================================================
 SECTION: Contact Content
 ========================================================= -->
 <section class="page-section contact-section">
-<div class="contact-wrapper">
-<h1 class="contact-title">CONNECT WITH DREW!</h1>
-<div class="contact-card">
-<p class="contact-subtext">
-Feel free to reach out about roles, projects, or opportunities in software, IT, or systems engineering.
-</p>
-<!-- =========================================================
-CONTACT ACTIONS
-========================================================= -->
-<div class="contact-actions">
-<!-- EMAIL -->
-<a href="mailto:DrewJ@drewbuilds.com" class="contact-pill">
-<img src="images/icons/outlookicon.png" alt="Email">
-<span>DrewJ@drewbuilds.com</span>
-</a>
-<!-- LINKEDIN -->
-<a href="https://www.linkedin.com/in/drew-jones-5a0233301/" target="_blank" class="contact-pill">
-<img src="images/icons/linkedinicon.svg" alt="LinkedIn">
-<span>Connect on LinkedIn</span>
-</a>
-<!-- GITHUB -->
-<a href="https://github.com/DrewBuild" target="_blank" class="contact-pill">
-<img src="images/icons/githubicon.png" alt="GitHub">
-<span>View GitHub</span>
-</a>
-<!-- RESUME -->
-<a href="docs/Resume.pdf" target="_blank" class="contact-pill">
-<img src="images/icons/resumeicon.png" alt="Resume">
-<span>View Resume</span>
-</a>
-</div>
-</div>
-</div>
+  <div class="contact-wrapper">
+    <h1 class="contact-title">CONNECT WITH DREW!</h1>
+
+    <div class="contact-card">
+      <p class="contact-subtext">
+        Feel free to reach out about roles, projects, or opportunities in software, IT, or systems engineering.
+      </p>
+
+      <!-- =========================================================
+      CONTACT ACTIONS
+      ========================================================= -->
+      <div class="contact-actions">
+
+        <!-- EMAIL -->
+        <a href="mailto:DrewJ@drewbuilds.com" class="contact-pill">
+          <img src="images/icons/outlookicon.png" alt="Email">
+          <span>DrewJ@drewbuilds.com</span>
+        </a>
+
+        <!-- LINKEDIN -->
+        <a href="https://www.linkedin.com/in/drew-jones-5a0233301/" target="_blank" class="contact-pill">
+          <img src="images/icons/linkedinicon.svg" alt="LinkedIn">
+          <span>Connect on LinkedIn</span>
+        </a>
+
+        <!-- GITHUB -->
+        <a href="https://github.com/DrewBuild" target="_blank" class="contact-pill">
+          <img src="images/icons/githubicon.png" alt="GitHub">
+          <span>View GitHub</span>
+        </a>
+
+        <!-- RESUME -->
+        <a href="docs/Resume.pdf" target="_blank" class="contact-pill">
+          <img src="images/icons/resumeicon.png" alt="Resume">
+          <span>View Resume</span>
+        </a>
+
+      </div>
+    </div>
+  </div>
 </section>
+
 <!-- =========================================================
 SCRIPTS
 ========================================================= -->

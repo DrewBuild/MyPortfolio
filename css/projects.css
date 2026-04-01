@@ -3,11 +3,17 @@ PROJECT SECTION
 ================================ */
 
 .project-section{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:120px 40px;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:120px 40px;
+}
+
+.project-wrapper{
+  width:100%;
+  display:flex;
+  justify-content:center;
 }
 
 /* ===============================
@@ -15,17 +21,19 @@ PROJECT CARD
 ================================ */
 
 .project-glass-card{
-width:min(1200px,95%);
-padding:60px;
-border-radius:32px;
-background:rgba(56,122,43,.55);
-backdrop-filter:blur(26px) saturate(160%);
-box-shadow:0 40px 120px rgba(0,0,0,.55),
-inset 0 1px 0 rgba(255,255,255,.12);
-display:flex;
-flex-direction:column;
-gap:36px;
-position:relative;
+  width:min(1200px,95%);
+  padding:60px;
+  border-radius:32px;
+  background:rgba(56,122,43,.55);
+  backdrop-filter:blur(26px) saturate(160%);
+  -webkit-backdrop-filter:blur(26px) saturate(160%);
+  box-shadow:
+    0 40px 120px rgba(0,0,0,.55),
+    inset 0 1px 0 rgba(255,255,255,.12);
+  display:flex;
+  flex-direction:column;
+  gap:36px;
+  position:relative;
 }
 
 /* ===============================
@@ -33,7 +41,7 @@ CAREERFLOW CARD COLOR
 ================================ */
 
 .purple-card{
-background:rgba(98,43,122,.65);
+  background:rgba(98,43,122,.65);
 }
 
 /* ===============================
@@ -41,10 +49,10 @@ HEADER
 ================================ */
 
 .project-header{
-display:flex;
-align-items:center;
-gap:24px;
-flex-wrap:wrap;
+  display:flex;
+  align-items:flex-start;
+  gap:24px;
+  flex-wrap:wrap;
 }
 
 /* ===============================
@@ -52,16 +60,22 @@ LOGOS
 ================================ */
 
 .project-icon{
-width:72px;
-height:72px;
-border-radius:18px;
-object-fit:contain;
+  width:72px;
+  height:72px;
+  border-radius:18px;
+  object-fit:contain;
+  display:block;
+  flex-shrink:0;
 }
 
 .project-icon-large{
-height:70px;
-width:auto;
-object-fit:contain;
+  width:auto;
+  max-width:140px;
+  max-height:80px;
+  height:auto;
+  object-fit:contain;
+  display:block;
+  flex-shrink:0;
 }
 
 /* ===============================
@@ -69,15 +83,16 @@ TITLE
 ================================ */
 
 .project-title{
-font-size:3.4rem;
-font-weight:900;
-line-height:1;
+  font-size:clamp(2.2rem, 6vw, 3.4rem);
+  font-weight:900;
+  line-height:1;
 }
 
 .project-title-block{
-display:flex;
-flex-direction:column;
-gap:6px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  min-width:0;
 }
 
 /* ===============================
@@ -85,13 +100,13 @@ VIEW CODE LINK
 ================================ */
 
 .project-code-link{
-color:white;
-text-decoration:none;
-font-weight:600;
+  color:white;
+  text-decoration:none;
+  font-weight:600;
 }
 
 .project-code-link:hover{
-text-decoration:underline;
+  text-decoration:underline;
 }
 
 /* ===============================
@@ -99,12 +114,12 @@ TECH STACK
 ================================ */
 
 .project-tech{
-position:absolute;
-top:32px;
-right:36px;
-display:flex;
-gap:18px;
-align-items:center;
+  position:absolute;
+  top:32px;
+  right:36px;
+  display:flex;
+  gap:18px;
+  align-items:center;
 }
 
 /* ===============================
@@ -112,16 +127,17 @@ TECH ICONS
 ================================ */
 
 .tech-icon{
-width:70px;
-height:70px;
-display:flex;
-align-items:center;
-justify-content:center;
-animation:floatTech 6s ease-in-out infinite;
+  width:70px;
+  height:70px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  animation:floatTech 6s ease-in-out infinite;
 }
 
 .tech-icon img{
-width:100%;
+  width:100%;
+  height:auto;
 }
 
 /* ===============================
@@ -129,10 +145,10 @@ DESCRIPTION
 ================================ */
 
 .project-description{
-font-size:1.15rem;
-line-height:1.7;
-max-width:850px;
-color:rgba(255,255,255,.9);
+  font-size:1.15rem;
+  line-height:1.7;
+  max-width:850px;
+  color:rgba(255,255,255,.9);
 }
 
 /* ===============================
@@ -140,20 +156,36 @@ CAROUSEL (Just Bean It)
 ================================ */
 
 .carousel-wrapper{
-display:flex;
-justify-content:center;
+  display:flex;
+  justify-content:center;
+  width:100%;
 }
 
 .carousel-track{
-display:flex;
-gap:28px;
-padding:12px;
+  display:flex;
+  gap:28px;
+  padding:12px;
+  overflow-x:auto;
+  overflow-y:hidden;
+  -webkit-overflow-scrolling:touch;
+  scroll-snap-type:x proximity;
+  width:100%;
+}
+
+.carousel-track::-webkit-scrollbar{
+  display:none;
+}
+
+.carousel-item{
+  flex:0 0 auto;
+  scroll-snap-align:center;
 }
 
 .carousel-item img{
-width:230px;
-border-radius:22px;
-box-shadow:0 20px 50px rgba(0,0,0,.5);
+  width:230px;
+  border-radius:22px;
+  box-shadow:0 20px 50px rgba(0,0,0,.5);
+  display:block;
 }
 
 /* ===============================
@@ -161,16 +193,22 @@ CAREERFLOW PREVIEW
 ================================ */
 
 .careerflow-preview{
-display:flex;
-justify-content:center;
-margin-top:40px;
+  display:flex;
+  justify-content:center;
+  margin-top:40px;
+}
+
+.careerflow-image{
+  width:100%;
+  display:flex;
+  justify-content:center;
 }
 
 .careerflow-image img{
-width:600px;
-max-width:95%;
-border-radius:20px;
-box-shadow:0 25px 70px rgba(0,0,0,.55);
+  width:600px;
+  max-width:95%;
+  border-radius:20px;
+  box-shadow:0 25px 70px rgba(0,0,0,.55);
 }
 
 /* ===============================
@@ -178,7 +216,164 @@ DEMO BUTTON
 ================================ */
 
 .demo-link{
-display:block;
-margin-top:30px;
-font-weight:600;
+  display:block;
+  margin-top:30px;
+  font-weight:600;
+}
+
+/* ===============================
+TABLET
+================================ */
+
+@media (max-width:1000px){
+
+  .project-section{
+    padding:110px 24px 70px;
+    min-height:auto;
+  }
+
+  .project-glass-card{
+    width:100%;
+    padding:36px 30px;
+    border-radius:26px;
+    gap:28px;
+  }
+
+  .project-header{
+    gap:18px;
+  }
+
+  .project-title{
+    font-size:clamp(1.9rem, 7vw, 2.8rem);
+  }
+
+  .project-tech{
+    position:relative;
+    top:auto;
+    right:auto;
+    margin-top:4px;
+    justify-content:flex-start;
+    gap:14px;
+  }
+
+  .tech-icon{
+    width:56px;
+    height:56px;
+  }
+
+  .project-description{
+    font-size:1.05rem;
+    line-height:1.65;
+  }
+
+  .carousel-track{
+    gap:18px;
+    padding:6px 2px 10px;
+  }
+
+  .carousel-item img{
+    width:190px;
+    border-radius:18px;
+  }
+
+  .careerflow-preview{
+    margin-top:20px;
+  }
+
+  .careerflow-image img{
+    max-width:100%;
+  }
+
+  .project-icon-large{
+    max-width:130px;
+    max-height:72px;
+  }
+}
+
+/* ===============================
+SMALL MOBILE
+================================ */
+
+@media (max-width:600px){
+
+  .project-section{
+    padding:100px 14px 50px;
+  }
+
+  .project-glass-card{
+    padding:24px 18px;
+    border-radius:22px;
+    gap:22px;
+  }
+
+  .project-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:14px;
+  }
+
+  .project-icon{
+    width:58px;
+    height:58px;
+    border-radius:14px;
+  }
+
+  .project-icon-large{
+    width:auto;
+    max-width:120px;
+    max-height:64px;
+    height:auto;
+  }
+
+  .project-title{
+    font-size:clamp(1.7rem, 8vw, 2.2rem);
+  }
+
+  .project-title-block{
+    gap:4px;
+  }
+
+  .project-code-link{
+    font-size:.95rem;
+  }
+
+  .project-tech{
+    gap:12px;
+    flex-wrap:wrap;
+  }
+
+  .tech-icon{
+    width:46px;
+    height:46px;
+  }
+
+  .project-description{
+    font-size:.98rem;
+    line-height:1.6;
+  }
+
+  .carousel-track{
+    gap:14px;
+    padding:4px 0 8px;
+  }
+
+  .carousel-item img{
+    width:155px;
+    border-radius:16px;
+  }
+
+  .careerflow-preview{
+    margin-top:12px;
+  }
+
+  .careerflow-image img{
+    width:100%;
+    max-width:100%;
+    border-radius:16px;
+  }
+
+  .demo-link{
+    margin-top:18px;
+    font-size:.95rem;
+  }
 }

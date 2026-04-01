@@ -13,6 +13,7 @@ META DATA
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Skills | Drew Builds</title>
 <link rel="icon" type="image/png" href="images/logos/djlogo.png">
+
 <!-- =========================================================
 STYLES
 Modular CSS system
@@ -23,104 +24,163 @@ Modular CSS system
 <link rel="stylesheet" href="css/animations.css">
 <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body class="theme-yellow">
 <div id="top"></div>
+
 <!-- =========================================================
 COMPONENT: Brand Logo
 ========================================================= -->
 <a href="index.html" class="brand-left">
-<img src="images/logos/djlogo.png" class="brand-logo" alt="Drew Logo">
+  <img src="images/logos/djlogo.png" class="brand-logo" alt="Drew Logo">
 </a>
+
 <!-- =========================================================
 COMPONENT: Resume Float Button
 ========================================================= -->
 <a href="docs/Resume.pdf" target="_blank" class="resume-float" aria-label="Download Resume">
-<img src="images/icons/resumeicon2.png" alt="Resume Icon">
+  <img src="images/icons/resumeicon2.png" alt="Resume Icon">
 </a>
+
 <!-- =========================================================
-COMPONENT: Contact Button
+COMPONENT: Contact Button (Desktop)
 ========================================================= -->
 <a href="contact.html" class="brand-right">Contact Me</a>
+
 <!-- =========================================================
-COMPONENT: Navigation
+COMPONENT: Navigation (Desktop)
 ========================================================= -->
 <nav class="glass-nav">
-<a href="projects.html">PROJECTS</a>
-<a href="skills.html" class="active">SKILLS</a>
-<a href="ethics.html">ETHICS</a>
-<a href="education.html">EDUCATION</a>
+  <a href="projects.html">PROJECTS</a>
+  <a href="skills.html" class="active">SKILLS</a>
+  <a href="ethics.html">ETHICS</a>
+  <a href="education.html">EDUCATION</a>
 </nav>
+
+<!-- =========================================================
+COMPONENT: Mobile Menu Toggle
+========================================================= -->
+<button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+  <span></span>
+  <span></span>
+</button>
+
+<!-- =========================================================
+COMPONENT: Mobile Menu
+========================================================= -->
+<nav class="mobile-menu" id="mobile-menu">
+  <a href="index.html">HOME</a>
+  <a href="projects.html">PROJECTS</a>
+  <a href="skills.html" class="active">SKILLS</a>
+  <a href="ethics.html">ETHICS</a>
+  <a href="education.html">EDUCATION</a>
+  <a href="contact.html">CONTACT</a>
+</nav>
+
 <!-- =========================================================
 SECTION: Skills Page
 ========================================================= -->
 <section class="skills-page">
-<!-- HERO -->
-<div class="skills-hero">
-<h1 class="skills-title">Skills</h1>
-<p class="skills-subtitle">
-A mix of technical depth, real-world tools, and leadership earned under pressure.
-</p>
-</div>
-<!-- GRID -->
-<div class="skills-grid">
-<!-- PROGRAMMING -->
-<div class="skills-card">
-<h2>Programming</h2>
-<ul>
-<li><span>C#</span> <em>.NET, backend logic, structured systems</em></li>
-<li><span>C++</span> <em>low-level logic, performance-focused thinking</em></li>
-<li><span>Swift</span> <em>SwiftUI, mobile-first app architecture</em></li>
-<li><span>HTML / CSS</span> <em>responsive UI, modern layout systems</em></li>
-</ul>
-</div>
-<!-- TOOLS -->
-<div class="skills-card">
-<h2>Tools & Tech</h2>
-<ul>
-<li><span>Git & GitHub</span> <em>version control, branching, PR workflows</em></li>
-<li><span>Xcode</span> <em>SwiftUI development & debugging</em></li>
-<li><span>Firebase</span> <em>Auth, Firestore, Storage, app backends</em></li>
-<li><span>Visual Studio</span> <em>C# and web development</em></li>
-<li><span>Lucidchart / Draw.io</span> <em>architecture & documentation</em></li>
-</ul>
-</div>
-<!-- LEADERSHIP -->
-<div class="skills-card wide">
-<h2>Leadership & Execution</h2>
-<ul>
-<li>
-<span>Team Captain — High School Cross Country & Track</span>
-<em>
-Led team culture, set training standards, and supported teammates
-through competitive seasons with consistency and accountability.
-</em>
-</li>
-<li>
-<span>FCA Leader — Southern Wesleyan University (Junior & Senior Year)</span>
-<em>
-Facilitated group discussions, mentored peers, and promoted leadership,
-discipline, and accountability within the campus community.
-</em>
-</li>
-<li>
-<span>Vice President of Communications — Student Government Association (Senior Year)</span>
-<em>
-Directed internal and external communications, coordinated messaging
-across campus initiatives, and supported executive decision-making.
-</em>
-</li>
-<li>
-<span>Execution Strengths</span>
-<em>
-Clear communication under pressure, conflict resolution, decision-making,
-time management across academics, athletics, and work, mentorship, and
-disciplined long-term execution.
-</em>
-</li>
-</ul>
-</div>
-</div>
+
+  <!-- HERO -->
+  <div class="skills-hero">
+    <h1 class="skills-title">Skills</h1>
+    <p class="skills-subtitle">
+      A mix of technical ability, project experience, and disciplined execution built through coursework, development projects, and leadership.
+    </p>
+  </div>
+
+  <!-- GRID -->
+  <div class="skills-grid">
+
+    <!-- TECHNICAL STRENGTHS -->
+    <div class="skills-card">
+      <h2>Technical Strengths</h2>
+      <ul>
+        <li><span>Responsive web development</span> <em>Building clean, adaptable layouts with HTML and CSS.</em></li>
+        <li><span>Mobile app development</span> <em>Creating app interfaces and features with SwiftUI.</em></li>
+        <li><span>Firebase integration</span> <em>Working with Authentication and Firestore for app login and cloud data.</em></li>
+        <li><span>Git & GitHub workflows</span> <em>Using version control, branching, commits, and pull requests in development.</em></li>
+        <li><span>UI structure and organization</span> <em>Building interfaces that are clear, usable, and well-structured.</em></li>
+      </ul>
+    </div>
+
+    <!-- PROJECT EXPERIENCE -->
+    <div class="skills-card">
+      <h2>Project Experience</h2>
+      <ul>
+        <li><span>SwiftUI coffee app</span> <em>Developed a mobile app with Firebase backend support.</em></li>
+        <li><span>Job application tracker</span> <em>Built a React and Firebase project for organizing and tracking applications.</em></li>
+        <li><span>Portfolio website</span> <em>Designed and deployed a personal website to showcase projects and experience.</em></li>
+        <li><span>Technical documentation</span> <em>Created architecture diagrams, workflows, and supporting project documentation for coursework.</em></li>
+      </ul>
+    </div>
+
+    <!-- HOW I WORK -->
+    <div class="skills-card wide">
+      <h2>How I Work</h2>
+      <ul>
+        <li>
+          <span>Quick learner with strong follow-through</span>
+          <em>
+            I adapt quickly to new tools and keep working until ideas become something usable and complete.
+          </em>
+        </li>
+        <li>
+          <span>Organized and consistent</span>
+          <em>
+            I work best with structure, especially on long-term projects that require steady progress and attention to detail.
+          </em>
+        </li>
+        <li>
+          <span>Independent, but coachable</span>
+          <em>
+            I am comfortable figuring things out on my own while also improving through feedback and collaboration.
+          </em>
+        </li>
+        <li>
+          <span>Focused on practical outcomes</span>
+          <em>
+            I like building things that are clean, useful, and realistic rather than overcomplicated for the sake of appearance.
+          </em>
+        </li>
+      </ul>
+    </div>
+
+    <!-- LEADERSHIP & DISCIPLINE -->
+    <div class="skills-card wide">
+      <h2>Leadership & Discipline</h2>
+      <ul>
+        <li>
+          <span>NCAA Division II athlete</span>
+          <em>
+            Competing at a high level has strengthened my discipline, resilience, and ability to perform under pressure.
+          </em>
+        </li>
+        <li>
+          <span>Balancing multiple commitments</span>
+          <em>
+            I have managed academics, athletics, leadership roles, and technical projects at the same time with consistency.
+          </em>
+        </li>
+        <li>
+          <span>Leadership through involvement</span>
+          <em>
+            Through FCA and student involvement, I have gained experience encouraging others, communicating clearly, and staying accountable.
+          </em>
+        </li>
+        <li>
+          <span>Strong execution habits</span>
+          <em>
+            Time management, accountability, and long-term consistency are some of the biggest strengths I bring to any team or project.
+          </em>
+        </li>
+      </ul>
+    </div>
+
+  </div>
 </section>
+
 <!-- =========================================================
 SCRIPTS
 ========================================================= -->

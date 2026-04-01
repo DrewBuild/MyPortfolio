@@ -1,44 +1,168 @@
 /* ===============================
    HERO SECTION
 ================================ */
-.hero-section,.hero-block{height:100vh;position:relative;display:flex;justify-content:center;align-items:center;}
-.hero-center{text-align:center;z-index:2;opacity:0;animation:fadeInHero 1.6s ease forwards;}
-.hero-logo{width:130px;filter:brightness(0) invert(1);margin-bottom:30px;}
-.hero-title{font-size:clamp(8rem,20vw,12rem);letter-spacing:10px;font-weight:600;color:#d08aff;}
+.hero-section,
+.hero-block{
+  min-height:100svh;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero-center{
+  text-align:center;
+  z-index:2;
+  opacity:0;
+  animation:fadeInHero 1.6s ease forwards;
+  width:min(92%, 1100px);
+  margin:0 auto;
+  padding:0 1rem;
+}
+
+.hero-logo{
+  width:130px;
+  max-width:30vw;
+  filter:brightness(0) invert(1);
+  margin-bottom:30px;
+}
+
+.hero-title{
+  font-size:clamp(3rem, 14vw, 12rem);
+  letter-spacing:clamp(2px, 1vw, 10px);
+  font-weight:600;
+  color:#d08aff;
+  line-height:.95;
+  word-break:break-word;
+}
 
 /* ===============================
    HERO SCROLL SNAP
 ================================ */
-.hero-about-section{scroll-snap-type:y mandatory;}
-.hero-block,.overview-links{scroll-snap-align:start;min-height:100vh;display:flex;flex-direction:column;justify-content:center;}
+.hero-about-section{
+  min-height:100svh;
+}
+
+.hero-block,
+.overview-links{
+  scroll-snap-align:start;
+  min-height:100svh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:6rem 1rem 3rem;
+}
 
 /* ===============================
    HERO BACKGROUND BLOBS
 ================================ */
-.hero-blob{position:absolute;width:400px;height:400px;border-radius:50%;filter:blur(10px);opacity:.65;animation:floatBlob 16s ease-in-out infinite alternate;}
-.hero-blue{background:radial-gradient(circle,#4aa8ff,#003e7a);}
+.hero-blob{
+  position:absolute;
+  width:min(55vw, 400px);
+  height:min(55vw, 400px);
+  border-radius:50%;
+  filter:blur(10px);
+  opacity:.65;
+  animation:floatBlob 16s ease-in-out infinite alternate;
+}
+
+.hero-blue{
+  background:radial-gradient(circle,#4aa8ff,#003e7a);
+}
 
 /* ===============================
    HERO TYPING EFFECT
 ================================ */
-.typing-container{font-size:2.2rem;white-space:nowrap;}
-.cursor{margin-left:4px;animation:blink .7s infinite;}
+.typing-container{
+  font-size:clamp(1rem, 4.5vw, 2.2rem);
+  white-space:normal;
+  word-break:break-word;
+  line-height:1.4;
+  padding:0 .5rem;
+}
+
+.cursor{
+  margin-left:4px;
+  animation:blink .7s infinite;
+}
 
 /* ===============================
    SCROLL INDICATOR
 ================================ */
-.scroll-indicator{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:.8;animation:fadeIn 1.5s ease forwards;transition:opacity .4s ease,transform .4s ease;}
-.scroll-indicator.hide{opacity:0;transform:translate(-50%,10px);pointer-events:none;}
-.scroll-text{font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;opacity:.7;}
-.mouse{width:22px;height:36px;border:2px solid rgba(255,255,255,.6);border-radius:12px;position:relative;}
-.wheel{position:absolute;top:6px;left:50%;transform:translateX(-50%);width:4px;height:6px;background:rgba(255,255,255,.6);border-radius:2px;animation:wheelScroll 1.5s infinite;}
+.scroll-indicator{
+  position:fixed;
+  bottom:24px;
+  left:50%;
+  transform:translateX(-50%);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:8px;
+  opacity:.8;
+  animation:fadeIn 1.5s ease forwards;
+  transition:opacity .4s ease,transform .4s ease;
+  z-index:20;
+}
+
+.scroll-indicator.hide{
+  opacity:0;
+  transform:translate(-50%,10px);
+  pointer-events:none;
+}
+
+.scroll-text{
+  font-size:.75rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  opacity:.7;
+}
+
+.mouse{
+  width:22px;
+  height:36px;
+  border:2px solid rgba(255,255,255,.6);
+  border-radius:12px;
+  position:relative;
+}
+
+.wheel{
+  position:absolute;
+  top:6px;
+  left:50%;
+  transform:translateX(-50%);
+  width:4px;
+  height:6px;
+  background:rgba(255,255,255,.6);
+  border-radius:2px;
+  animation:wheelScroll 1.5s infinite;
+}
 
 /* ===============================
    HERO OVERVIEW LINKS
 ================================ */
-.overview-links{display:flex;flex-direction:column;align-items:flex-start;gap:16px;}
-.ov-link{text-decoration:none;font-size:clamp(4rem,10vw,6rem);font-weight:600;letter-spacing:.12em;transition:transform .25s ease;}
-.ov-link:hover{transform:translateX(10px);}
+.overview-links{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:16px;
+  width:min(92%, 1100px);
+  margin:0 auto;
+}
+
+.ov-link{
+  text-decoration:none;
+  font-size:clamp(1.8rem, 8vw, 6rem);
+  font-weight:600;
+  letter-spacing:.08em;
+  line-height:1.05;
+  transition:transform .25s ease;
+  word-break:break-word;
+}
+
+.ov-link:hover{
+  transform:translateX(10px);
+}
+
 .ov-project{color:#ff9d3b;}
 .ov-skills{color:#ffe974;}
 .ov-ethics{color:#7aff90;}
@@ -48,18 +172,178 @@
 /* ===============================
    FLOATING LINKEDIN ICON
 ================================ */
-.linkedin-float{position:absolute;right:5%;top:155%;transform:translateY(-50%);width:400px;display:flex;justify-content:center;align-items:center;animation:linkedinFloat 6s ease-in-out infinite;z-index:5;}
-.linkedin-float img{width:100%;height:auto;transition:transform .35s ease;}
-.linkedin-float:hover img{transform:translateY(-6px) scale(1.02);}
+.linkedin-float{
+  position:absolute;
+  right:5%;
+  top:155%;
+  transform:translateY(-50%);
+  width:400px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  animation:linkedinFloat 6s ease-in-out infinite;
+  z-index:5;
+}
+
+.linkedin-float img{
+  width:100%;
+  height:auto;
+  transition:transform .35s ease;
+}
+
+.linkedin-float:hover img{
+  transform:translateY(-6px) scale(1.02);
+}
 
 /* ===============================
    LINKEDIN FIXED IMAGE
 ================================ */
-.about-linkedin-img{position:fixed;left:40px;top:50%;transform:translateY(-50%);width:300px;z-index:10;animation:floaty 6s ease-in-out infinite;}
+.about-linkedin-img{
+  position:fixed;
+  left:40px;
+  top:50%;
+  transform:translateY(-50%);
+  width:300px;
+  z-index:10;
+  animation:floaty 6s ease-in-out infinite;
+}
 
 /* ===============================
    FLOATING GITHUB ICON
 ================================ */
-.github-float{position:absolute;left:5%;top:50%;transform:translateY(-50%);width:450px;display:flex;justify-content:center;align-items:center;animation:githubFloat 6s ease-in-out infinite;z-index:5;}
-.github-float img{width:100%;height:auto;transition:transform .35s ease;}
-.github-float:hover img{transform:translateY(-6px) scale(1.02);}
+.github-float{
+  position:absolute;
+  left:5%;
+  top:50%;
+  transform:translateY(-50%);
+  width:450px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  animation:githubFloat 6s ease-in-out infinite;
+  z-index:5;
+}
+
+.github-float img{
+  width:100%;
+  height:auto;
+  transition:transform .35s ease;
+}
+
+.github-float:hover img{
+  transform:translateY(-6px) scale(1.02);
+}
+
+/* ===============================
+   TABLET
+================================ */
+@media (max-width:900px){
+
+  .hero-about-section{
+    min-height:auto;
+  }
+
+  .hero-block{
+    min-height:100svh;
+    padding:110px 20px 40px;
+  }
+
+  .hero-center{
+    width:100%;
+    padding:0;
+  }
+
+  .hero-logo{
+    width:96px;
+    max-width:none;
+    margin-bottom:18px;
+  }
+
+  .hero-title{
+    font-size:clamp(3rem, 14vw, 5.5rem);
+    letter-spacing:3px;
+  }
+
+  .typing-container{
+    font-size:clamp(1rem, 4.8vw, 1.5rem);
+    text-align:center;
+  }
+
+  .overview-links{
+    min-height:100svh;
+    width:100%;
+    padding:110px 20px 70px;
+    justify-content:center;
+    gap:18px;
+  }
+
+  .ov-link{
+    font-size:clamp(2rem, 10vw, 3.5rem);
+    letter-spacing:.04em;
+  }
+
+  .hero-blob{
+    width:min(62vw, 240px);
+    height:min(62vw, 240px);
+    left:-8%;
+    top:18%;
+  }
+
+  .linkedin-float,
+  .about-linkedin-img,
+  .github-float{
+    display:none !important;
+  }
+
+  /* hide scroll indicator on mobile */
+  .scroll-indicator{
+    display:none !important;
+  }
+}
+
+/* ===============================
+   SMALL MOBILE
+================================ */
+@media (max-width:600px){
+
+  .hero-block{
+    min-height:100svh;
+    padding:92px 16px 30px;
+  }
+
+  .hero-logo{
+    width:64px;
+    margin-bottom:14px;
+  }
+
+  .hero-title{
+    font-size:clamp(2.2rem, 12vw, 4rem);
+    letter-spacing:1px;
+  }
+
+  .typing-container{
+    font-size:1rem;
+    line-height:1.35;
+    padding:0;
+  }
+
+  .overview-links{
+    min-height:100svh;
+    padding:92px 16px 44px;
+    gap:14px;
+    justify-content:center;
+  }
+
+  .ov-link{
+    font-size:clamp(1.8rem, 9vw, 2.9rem);
+    line-height:1.03;
+  }
+
+  .hero-blob{
+    width:180px;
+    height:180px;
+    left:-60px;
+    top:180px;
+    opacity:.55;
+  }
+}

@@ -1,69 +1,97 @@
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 html{
-scroll-snap-type:y mandatory;
+  scroll-behavior:smooth;
 }
 
 body{
-background:#000;
-color:white;
-font-family:"Inter",sans-serif;
-overflow-x:hidden;
+  background:#000;
+  color:white;
+  font-family:"Inter",sans-serif;
+  overflow-x:hidden;
 }
 
 body.scroll-locked{
-overflow:hidden;
+  overflow:hidden;
 }
 
 /* PAGE THEMES */
 
 body.theme-hero,
 body.theme-purple{
-background:#1a0f1f!important;
---contact-accent:#d08aff;
+  background:#1a0f1f !important;
+  --contact-accent:#d08aff;
 }
 
 body.theme-orange{
-background:#1f150a!important;
---contact-accent:#ff9d3b;
+  background:#1f150a !important;
+  --contact-accent:#ff9d3b;
 }
 
 body.theme-yellow{
-background:#1f1a0a!important;
---contact-accent:#ffe974;
+  background:#1f1a0a !important;
+  --contact-accent:#ffe974;
 }
 
 body.theme-green{
-background:#0f1f14!important;
---contact-accent:#7aff90;
+  background:#0f1f14 !important;
+  --contact-accent:#7aff90;
 }
 
 body.theme-red{
-background:#1f0c0c!important;
---contact-accent:#ff7070;
+  background:#1f0c0c !important;
+  --contact-accent:#ff7070;
 }
 
 body.theme-contact{
-background:#0b1a2e!important;
---contact-accent:#7fb4ff;
+  background:#0b1a2e !important;
+  --contact-accent:#7fb4ff;
 }
 
 .page-section{
-height:100vh;
-padding-top:120px;
-display:flex;
-justify-content:center;
-align-items:center;
+  min-height:100vh;
+  padding-top:120px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 }
 
 .section-content{
-text-align:center;
+  text-align:center;
 }
 
 .section-content h1{
-font-size:4rem;
+  font-size:4rem;
+}
+
+/* MOBILE ADJUSTMENTS */
+
+@media (max-width:900px){
+
+  .page-section{
+    min-height:auto;
+    padding-top:110px;
+    padding-bottom:60px;
+    align-items:flex-start;
+  }
+
+  .section-content h1{
+    font-size:clamp(2.5rem, 8vw, 4rem);
+  }
+}
+
+@media (max-width:600px){
+
+  .page-section{
+    padding-top:100px;
+    padding-bottom:50px;
+  }
+
+  .section-content h1{
+    font-size:clamp(2rem, 10vw, 3rem);
+  }
 }
