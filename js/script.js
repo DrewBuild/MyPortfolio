@@ -54,19 +54,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* =====================================
   SCROLL INDICATOR
-  - Hides after slight scroll
-  - Mobile-safe (passive scroll)
+  - Hide after user scrolls down
+  - Show only near top of page
   ===================================== */
   const scrollIndicator = document.querySelector(".scroll-indicator");
 
+  function updateScrollIndicator() {
+    if (!scrollIndicator) return;
+
+    if (window.scrollY > 40) {
+      scrollIndicator.classList.add("hide");
+    } else {
+      scrollIndicator.classList.remove("hide");
+    }
+  }
+
   if (scrollIndicator) {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 50) {
-        scrollIndicator.classList.add("hide");
-      } else {
-        scrollIndicator.classList.remove("hide");
-      }
-    }, { passive: true });
+    updateScrollIndicator();
+    window.addEventListener("scroll", updateScrollIndicator, { passive: true });
+    window.addEventListener("load", updateScrollIndicator);
   }
 
   /* =====================================

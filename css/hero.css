@@ -15,7 +15,7 @@
   z-index:2;
   opacity:0;
   animation:fadeInHero 1.6s ease forwards;
-  width:min(92%, 1100px);
+  width:min(96%, 1600px);
   margin:0 auto;
   padding:0 1rem;
 }
@@ -24,16 +24,21 @@
   width:130px;
   max-width:30vw;
   filter:brightness(0) invert(1);
-  margin-bottom:30px;
+  margin-bottom:28px;
 }
 
 .hero-title{
-  font-size:clamp(3rem, 14vw, 12rem);
-  letter-spacing:clamp(2px, 1vw, 10px);
+  font-size:clamp(4.5rem, 16vw, 11rem);
+  letter-spacing:clamp(2px, .7vw, 10px);
   font-weight:600;
   color:#d08aff;
-  line-height:.95;
-  word-break:break-word;
+  line-height:.92;
+  white-space:nowrap;
+  margin:0;
+}
+
+.hero-center h1{
+  display:block;
 }
 
 /* ===============================
@@ -58,27 +63,30 @@
 ================================ */
 .hero-blob{
   position:absolute;
-  width:min(55vw, 400px);
-  height:min(55vw, 400px);
+  width:min(42vw, 520px);
+  height:min(42vw, 520px);
   border-radius:50%;
   filter:blur(10px);
-  opacity:.65;
+  opacity:.58;
   animation:floatBlob 16s ease-in-out infinite alternate;
 }
 
 .hero-blue{
   background:radial-gradient(circle,#4aa8ff,#003e7a);
+  left:56%;
+  top:50%;
+  transform:translate(-50%, -50%);
 }
 
 /* ===============================
    HERO TYPING EFFECT
 ================================ */
 .typing-container{
-  font-size:clamp(1rem, 4.5vw, 2.2rem);
-  white-space:normal;
-  word-break:break-word;
-  line-height:1.4;
-  padding:0 .5rem;
+  font-size:clamp(1.1rem, 2.4vw, 2.2rem);
+  white-space:nowrap;
+  line-height:1.3;
+  padding:0;
+  margin-bottom:14px;
 }
 
 .cursor{
@@ -235,6 +243,19 @@
 }
 
 /* ===============================
+   LARGE DESKTOP TUNING
+================================ */
+@media (min-width:1200px){
+  .hero-block{
+    padding:7rem 2rem 4rem;
+  }
+
+  .overview-links{
+    width:min(90%, 1200px);
+  }
+}
+
+/* ===============================
    TABLET
 ================================ */
 @media (max-width:900px){
@@ -262,11 +283,13 @@
   .hero-title{
     font-size:clamp(3rem, 14vw, 5.5rem);
     letter-spacing:3px;
+    white-space:nowrap;
   }
 
   .typing-container{
     font-size:clamp(1rem, 4.8vw, 1.5rem);
     text-align:center;
+    white-space:nowrap;
   }
 
   .overview-links{
@@ -285,8 +308,12 @@
   .hero-blob{
     width:min(62vw, 240px);
     height:min(62vw, 240px);
+  }
+
+  .hero-blue{
     left:-8%;
     top:18%;
+    transform:none;
   }
 
   .linkedin-float,
@@ -295,7 +322,6 @@
     display:none !important;
   }
 
-  /* hide scroll indicator on mobile */
   .scroll-indicator{
     display:none !important;
   }
@@ -345,5 +371,10 @@
     left:-60px;
     top:180px;
     opacity:.55;
+  }
+
+  .hero-title,
+  .typing-container{
+    white-space:normal;
   }
 }

@@ -12,16 +12,39 @@ Purpose: SEO + social previews + favicon
 ========================================================= -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Drew Builds | Portfolio</title>
-<meta name="description" content="Drew Jones • Greenville, SC • Software Developer">
+
+<title>Drew Builds | Software Developer Portfolio</title>
+<meta name="description" content="Drew Jones is a software developer and CIS student building mobile apps, responsive websites, and full-stack projects with SwiftUI, Firebase, React, and modern web tools.">
+
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://drewbuilds.com/">
-<meta property="og:title" content="Drew Builds | Portfolio">
-<meta property="og:description" content="Drew Jones • Greenville, SC • Software Developer">
-<meta property="og:image" content="https://drewbuilds.com/images/pic/portfolioss.png">
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:image" content="https://drewbuilds.com/images/pic/portfolioss.png">
-<link rel="icon" type="image/png" href="images/logos/djlogo.png">
+<meta property="og:title" content="Drew Builds | Software Developer Portfolio">
+<meta property="og:description" content="Portfolio of Drew Jones featuring mobile apps, web projects, and technical work.">
+<meta property="og:image" content="https://drewbuilds.com/images/logos/djlogo-512.png">
+<meta property="og:site_name" content="Drew Builds">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Drew Builds | Software Developer Portfolio">
+<meta name="twitter:description" content="Portfolio of Drew Jones featuring mobile apps, web projects, and technical work.">
+<meta name="twitter:image" content="https://drewbuilds.com/images/logos/djlogo-512.png">
+
+<link rel="icon" type="image/png" sizes="48x48" href="images/logos/djlogo-48.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/logos/djlogo-180.png">
+
+<link rel="canonical" href="https://drewbuilds.com/">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Drew Builds",
+  "url": "https://drewbuilds.com/",
+  "logo": "https://drewbuilds.com/images/logos/djlogo-512.png",
+  "alternateName": "Drew Builds Portfolio"
+}
+</script>
 
 <!-- =========================================================
 STYLES
@@ -40,24 +63,24 @@ Modular CSS system
 <!-- =========================================================
 COMPONENT: Brand Logo (Top Left)
 ========================================================= -->
-<a href="index.html" class="brand-left active-home">
+<a href="index.html" class="brand-left active-home" data-nosnippet>
   <img
     src="images/logos/djlogo.png"
-    alt="Drew Logo"
+    alt="Drew Builds Logo"
     class="brand-logo">
 </a>
 
 <!-- =========================================================
 COMPONENT: Contact Button (Desktop)
 ========================================================= -->
-<a href="contact.html" class="brand-right">
+<a href="contact.html" class="brand-right" data-nosnippet>
   Contact Me
 </a>
 
 <!-- =========================================================
 COMPONENT: Main Navigation (Desktop)
 ========================================================= -->
-<nav class="glass-nav">
+<nav class="glass-nav" data-nosnippet>
   <a href="projects.html">PROJECTS</a>
   <a href="skills.html">SKILLS</a>
   <a href="ethics.html">ETHICS</a>
@@ -67,7 +90,7 @@ COMPONENT: Main Navigation (Desktop)
 <!-- =========================================================
 COMPONENT: Mobile Menu Toggle
 ========================================================= -->
-<button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+<button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu" data-nosnippet>
   <span></span>
   <span></span>
 </button>
@@ -75,7 +98,7 @@ COMPONENT: Mobile Menu Toggle
 <!-- =========================================================
 COMPONENT: Mobile Menu
 ========================================================= -->
-<nav class="mobile-menu" id="mobile-menu">
+<nav class="mobile-menu" id="mobile-menu" data-nosnippet>
   <a href="index.html">HOME</a>
   <a href="projects.html">PROJECTS</a>
   <a href="skills.html">SKILLS</a>
@@ -100,7 +123,8 @@ SECTION: HERO + OVERVIEW
       <img
         src="images/logos/djlogo.png"
         class="hero-logo"
-        alt="Drew Builds Logo">
+        alt="Drew Builds Logo"
+        data-nosnippet>
 
       <!-- Typing Animation -->
       <div class="typing-container">
@@ -116,7 +140,7 @@ SECTION: HERO + OVERVIEW
   BLOCK: OVERVIEW LINKS
   Quick navigation to key portfolio sections
   ========================================================= -->
-  <div class="overview-links">
+  <div class="overview-links" data-nosnippet>
     <a href="projects.html" class="ov-link ov-project">
       01 PROJECTS
     </a>
@@ -141,7 +165,8 @@ SECTION: HERO + OVERVIEW
     href="https://www.linkedin.com/in/drew-jones-5a0233301/"
     target="_blank"
     class="linkedin-float"
-    aria-label="Visit my LinkedIn profile">
+    aria-label="Visit my LinkedIn profile"
+    data-nosnippet>
     <img
       src="images/icons/linkedinicon2.png"
       alt="LinkedIn Profile">
@@ -151,7 +176,7 @@ SECTION: HERO + OVERVIEW
 <!-- =========================================================
 COMPONENT: Scroll Indicator
 ========================================================= -->
-<div class="scroll-indicator">
+<div class="scroll-indicator" data-nosnippet>
   <div class="mouse">
     <span class="wheel"></span>
   </div>
