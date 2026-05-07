@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const textEl = document.getElementById("typing-text");
 
   if (textEl) {
-    const phrases = ["Drew Jones", "Greenville, SC", "DrewBuilds.com"];
+    const phrases = ["Drew Jones", "Sumterville, FL", "DrewBuilds.com"];
     let currentPhrase = 0;
     let currentChar = 0;
     let isDeleting = false;
