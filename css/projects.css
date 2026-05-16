@@ -7,11 +7,14 @@ PROJECT SECTION
   display:flex;
   align-items:center;
   justify-content:center;
+  width:100%;
   padding:120px 40px;
 }
 
 .project-wrapper{
   width:100%;
+  min-width:0;
+  max-width:100%;
   display:flex;
   justify-content:center;
 }
@@ -22,6 +25,8 @@ PROJECT CARD
 
 .project-glass-card{
   width:min(1200px,95%);
+  max-width:100%;
+  min-width:0;
   padding:60px;
   border-radius:32px;
   box-sizing:border-box;
@@ -192,9 +197,10 @@ Scoped so your other project UI doesn't get nuked. Humanity survives.
 
 .jbi-hero-grid{
   display:grid;
-  grid-template-columns:minmax(0,1.05fr) minmax(340px,.95fr);
+  grid-template-columns:minmax(0,760px);
   gap:42px;
   align-items:center;
+  justify-content:start;
   position:relative;
   z-index:1;
 }
@@ -203,6 +209,7 @@ Scoped so your other project UI doesn't get nuked. Humanity survives.
   display:flex;
   flex-direction:column;
   gap:26px;
+  min-width:0;
 }
 
 .jbi-label{
@@ -223,6 +230,7 @@ Scoped so your other project UI doesn't get nuked. Humanity survives.
   display:flex;
   align-items:center;
   gap:18px;
+  min-width:0;
 }
 
 .jbi-app-icon{
@@ -371,6 +379,83 @@ Scoped so your other project UI doesn't get nuked. Humanity survives.
   line-height:1.1;
 }
 
+.jbi-section-heading{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  position:relative;
+  z-index:1;
+}
+
+.jbi-section-heading h2{
+  color:#fff;
+  font-size:clamp(1.45rem, 3vw, 2.15rem);
+  line-height:1.1;
+}
+
+.jbi-section-heading p{
+  color:rgba(255,255,255,.72);
+  font-size:1rem;
+  line-height:1.6;
+}
+
+.jbi-app-experience{
+  position:relative;
+  z-index:1;
+  display:flex;
+  flex-direction:column;
+  gap:22px;
+  min-width:0;
+}
+
+.jbi-screenshot-gallery{
+  display:grid;
+  grid-template-columns:repeat(7, minmax(0,1fr));
+  gap:16px;
+  align-items:start;
+  min-width:0;
+}
+
+.jbi-screenshot-card{
+  position:relative;
+  display:block;
+  min-width:0;
+  aspect-ratio:1242 / 2688;
+  border-radius:28px;
+  padding:6px;
+  overflow:hidden;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.18), rgba(255,255,255,.04)),
+    rgba(255,255,255,.07);
+  border:1px solid rgba(203,255,63,.24);
+  box-shadow:
+    0 28px 70px rgba(0,0,0,.48),
+    0 0 42px rgba(203,255,63,.08),
+    inset 0 1px 0 rgba(255,255,255,.16);
+  transition:transform .24s ease, border-color .24s ease, box-shadow .24s ease;
+}
+
+.jbi-screenshot-card:nth-child(even){
+  margin-top:34px;
+}
+
+.jbi-screenshot-card:hover{
+  transform:translateY(-8px);
+  border-color:rgba(203,255,63,.46);
+  box-shadow:
+    0 36px 84px rgba(0,0,0,.55),
+    0 0 54px rgba(203,255,63,.16),
+    inset 0 1px 0 rgba(255,255,255,.2);
+}
+
+.jbi-screenshot-card img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  border-radius:22px;
+}
+
 .jbi-feature-grid{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -412,45 +497,92 @@ Scoped so your other project UI doesn't get nuked. Humanity survives.
   max-width:980px;
 }
 
-.jbi-showcase{
-  min-height:610px;
+.jbi-support-panel{
   position:relative;
-  min-width:0;
-}
-
-.jbi-phone{
-  display:block;
-  width:280px;
-  border-radius:28px;
-  box-shadow:0 30px 80px rgba(0,0,0,.58);
-  border:1px solid rgba(203,255,63,.22);
-}
-
-.jbi-phone-main{
-  width:310px;
-  margin:0 auto;
-  transform:rotate(2deg);
-  position:relative;
-  z-index:2;
-}
-
-.jbi-phone-float{
-  position:absolute;
-  width:210px;
-  opacity:.92;
   z-index:1;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  padding:28px;
+  border-radius:28px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.05)),
+    rgba(0,32,19,.42);
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:
+    0 28px 80px rgba(0,0,0,.36),
+    inset 0 1px 0 rgba(255,255,255,.12);
 }
 
-.jbi-phone-feed{
-  left:0;
-  top:70px;
-  transform:rotate(-8deg);
+.jbi-support-grid{
+  display:grid;
+  grid-template-columns:repeat(4, minmax(0,1fr));
+  gap:14px;
 }
 
-.jbi-phone-post{
-  right:0;
-  bottom:40px;
-  transform:rotate(8deg);
+.jbi-resource-card{
+  min-width:0;
+  min-height:152px;
+  padding:18px;
+  border-radius:22px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  gap:12px;
+  color:#fff;
+  text-decoration:none;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.13);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.1);
+  transition:transform .22s ease, background .22s ease, border-color .22s ease, box-shadow .22s ease;
+}
+
+.jbi-resource-card:hover{
+  transform:translateY(-5px);
+  background:rgba(255,255,255,.13);
+  border-color:rgba(203,255,63,.42);
+  box-shadow:
+    0 20px 48px rgba(0,0,0,.28),
+    inset 0 1px 0 rgba(255,255,255,.14);
+}
+
+.jbi-resource-card:focus-visible,
+.jbi-testflight-link:focus-visible,
+.jbi-button:focus-visible,
+.glass-nav a:focus-visible,
+.mobile-menu a:focus-visible,
+.brand-left:focus-visible,
+.brand-right:focus-visible,
+.menu-toggle:focus-visible{
+  outline:3px solid rgba(203,255,63,.85);
+  outline-offset:4px;
+}
+
+.jbi-resource-icon{
+  width:42px;
+  height:42px;
+  border-radius:14px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#0b2c1b;
+  background:#ccff3f;
+  font-size:.86rem;
+  font-weight:900;
+  box-shadow:0 12px 28px rgba(203,255,63,.18);
+}
+
+.jbi-resource-card strong{
+  display:block;
+  color:#fff;
+  font-size:1rem;
+  line-height:1.25;
+}
+
+.jbi-resource-card span:last-child{
+  color:rgba(255,255,255,.68);
+  font-size:.86rem;
+  line-height:1.4;
 }
 
 .project-footer{
@@ -577,37 +709,23 @@ TABLET
     gap:34px;
   }
 
-  .jbi-showcase{
-    min-height:auto;
-    display:flex;
-    justify-content:flex-start;
-    gap:16px;
-    overflow-x:auto;
-    padding:10px 2px 18px;
-    scroll-snap-type:x proximity;
-    -webkit-overflow-scrolling:touch;
-  }
-
-  .jbi-phone,
-  .jbi-phone-main,
-  .jbi-phone-float{
-    position:relative;
-    inset:auto;
-    width:220px;
-    flex:0 0 auto;
-    transform:none;
-    scroll-snap-align:center;
-  }
-
-  .jbi-phone:first-child{
-    margin-left:auto;
-  }
-
-  .jbi-phone:last-child{
-    margin-right:auto;
-  }
-
   .jbi-feature-grid{
+    grid-template-columns:repeat(2, minmax(0,1fr));
+  }
+
+  .jbi-screenshot-gallery{
+    grid-template-columns:repeat(4, minmax(0,1fr));
+  }
+
+  .jbi-screenshot-card{
+    border-radius:24px;
+  }
+
+  .jbi-screenshot-card img{
+    border-radius:19px;
+  }
+
+  .jbi-support-grid{
     grid-template-columns:repeat(2, minmax(0,1fr));
   }
 
@@ -645,6 +763,8 @@ SMALL MOBILE
     padding:24px 18px;
     border-radius:22px;
     gap:22px;
+    width:calc(100vw - 28px);
+    max-width:calc(100vw - 28px);
   }
 
   .project-header{
@@ -761,14 +881,56 @@ SMALL MOBILE
     grid-template-columns:1fr;
   }
 
-  .jbi-phone,
-  .jbi-phone-main,
-  .jbi-phone-float{
-    width:180px;
+  .jbi-app-experience{
+    margin-left:-18px;
+    margin-right:-18px;
+  }
+
+  .jbi-app-experience .jbi-section-heading{
+    padding:0 18px;
+  }
+
+  .jbi-screenshot-gallery{
+    display:flex;
+    gap:14px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    padding:4px 18px 18px;
+    scroll-snap-type:x mandatory;
+    scroll-padding:18px;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .jbi-screenshot-gallery::-webkit-scrollbar{
+    display:none;
+  }
+
+  .jbi-screenshot-card,
+  .jbi-screenshot-card:nth-child(even){
+    flex:0 0 clamp(178px, 67vw, 260px);
+    margin-top:0;
+    scroll-snap-align:center;
+  }
+
+  .jbi-screenshot-card:hover{
+    transform:translateY(-4px);
   }
 
   .project-footer{
     grid-template-columns:1fr;
+  }
+
+  .jbi-support-panel{
+    padding:20px;
+    border-radius:22px;
+  }
+
+  .jbi-support-grid{
+    grid-template-columns:1fr;
+  }
+
+  .jbi-resource-card{
+    min-height:112px;
   }
 
   .carousel-track{
@@ -797,6 +959,8 @@ VERY SMALL MOBILE
   .project-glass-card{
     padding:22px 14px;
     border-radius:20px;
+    width:calc(100vw - 20px);
+    max-width:calc(100vw - 20px);
   }
 
   .jbi-title-row{
@@ -841,13 +1005,117 @@ VERY SMALL MOBILE
     height:52px;
   }
 
-  .jbi-phone,
-  .jbi-phone-main,
-  .jbi-phone-float{
-    width:160px;
+  .jbi-screenshot-card,
+  .jbi-screenshot-card:nth-child(even){
+    flex-basis:clamp(158px, 72vw, 224px);
   }
 
   .footer-stat{
     padding:16px;
+  }
+}
+
+/* ===============================
+JUST BEAN IT LEGAL PAGES
+================================ */
+
+.jbi-legal-page{
+  min-height:100vh;
+  padding:130px 24px 70px;
+  display:flex;
+  justify-content:center;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(203,255,63,.16), transparent 28%),
+    radial-gradient(circle at 82% 24%, rgba(112,175,48,.2), transparent 30%),
+    #1f150a;
+}
+
+.jbi-legal-card{
+  width:min(920px,100%);
+  padding:44px;
+  border-radius:30px;
+  background:
+    linear-gradient(135deg, rgba(0,73,38,.9), rgba(2,48,29,.96));
+  border:1px solid rgba(203,255,63,.26);
+  box-shadow:
+    0 40px 110px rgba(0,0,0,.58),
+    inset 0 1px 0 rgba(255,255,255,.13);
+}
+
+.jbi-legal-kicker{
+  color:#ccff3f;
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:14px;
+}
+
+.jbi-legal-card h1{
+  color:#fff;
+  font-size:clamp(2rem, 6vw, 3.3rem);
+  line-height:1;
+  margin-bottom:16px;
+}
+
+.jbi-legal-intro{
+  color:rgba(255,255,255,.82);
+  font-size:1.05rem;
+  line-height:1.7;
+  max-width:760px;
+  margin-bottom:30px;
+}
+
+.jbi-legal-section{
+  padding:22px 0;
+  border-top:1px solid rgba(255,255,255,.12);
+}
+
+.jbi-legal-section h2{
+  color:#fff;
+  font-size:1.18rem;
+  margin-bottom:10px;
+}
+
+.jbi-legal-section p{
+  color:rgba(255,255,255,.76);
+  font-size:1rem;
+  line-height:1.7;
+}
+
+.jbi-legal-footer{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  align-items:center;
+  justify-content:space-between;
+  padding-top:26px;
+  border-top:1px solid rgba(255,255,255,.12);
+  color:rgba(255,255,255,.68);
+}
+
+.jbi-legal-footer a{
+  color:#ccff3f;
+  font-weight:800;
+  text-decoration:none;
+}
+
+.jbi-legal-footer a:hover{
+  text-decoration:underline;
+}
+
+.jbi-legal-footer a:focus-visible{
+  outline:3px solid rgba(203,255,63,.85);
+  outline-offset:4px;
+}
+
+@media (max-width:600px){
+  .jbi-legal-page{
+    padding:98px 14px 46px;
+  }
+
+  .jbi-legal-card{
+    padding:26px 18px;
+    border-radius:22px;
   }
 }
