@@ -197,7 +197,9 @@ Scoped so your other project UI doesn't get nuked. Humanity survives.
 
 .jbi-hero-grid{
   display:grid;
-  grid-template-columns:minmax(0,760px);
+  grid-template-columns:minmax(0,1fr);
+  width:100%;
+  max-width:760px;
   gap:42px;
   align-items:center;
   justify-content:start;
