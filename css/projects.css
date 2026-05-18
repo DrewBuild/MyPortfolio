@@ -367,6 +367,24 @@ Scoped so your other project UI doesn't get nuked. Humanity survives.
   text-align:center;
 }
 
+.jbi-support-link{
+  min-width:128px;
+}
+
+.jbi-link-mark{
+  width:46px;
+  height:46px;
+  border-radius:16px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  color:#082817;
+  background:#ccff3f;
+  font-size:1.25rem;
+  line-height:1;
+  box-shadow:0 14px 30px rgba(203,255,63,.18);
+}
+
 .jbi-content-panel{
   position:relative;
   z-index:1;
@@ -551,6 +569,8 @@ Scoped so your other project UI doesn't get nuked. Humanity survives.
 .jbi-resource-card:focus-visible,
 .jbi-testflight-link:focus-visible,
 .jbi-button:focus-visible,
+.jbi-auth-button:focus-visible,
+.jbi-support-note a:focus-visible,
 .glass-nav a:focus-visible,
 .mobile-menu a:focus-visible,
 .brand-left:focus-visible,
@@ -1034,6 +1054,8 @@ JUST BEAN IT LEGAL PAGES
 
 .jbi-legal-card{
   width:min(920px,100%);
+  max-width:100%;
+  box-sizing:border-box;
   padding:44px;
   border-radius:30px;
   background:
@@ -1085,6 +1107,109 @@ JUST BEAN IT LEGAL PAGES
   line-height:1.7;
 }
 
+.jbi-support-page .jbi-legal-card{
+  width:min(1040px,100%);
+}
+
+.jbi-support-hero{
+  display:flex;
+  gap:22px;
+  align-items:center;
+  margin-bottom:28px;
+}
+
+.jbi-support-logo{
+  width:82px;
+  height:82px;
+  flex:0 0 auto;
+  border-radius:24px;
+  object-fit:cover;
+  padding:10px;
+  background:rgba(0,50,29,.72);
+  border:1px solid rgba(203,255,63,.28);
+  box-shadow:0 16px 45px rgba(0,0,0,.35);
+}
+
+.jbi-support-page-grid{
+  grid-template-columns:repeat(3, minmax(0,1fr));
+}
+
+.jbi-support-note{
+  margin-top:22px;
+  padding:16px 18px;
+  border-radius:18px;
+  color:rgba(255,255,255,.72);
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.11);
+  font-size:.95rem;
+  line-height:1.6;
+}
+
+.jbi-support-note a{
+  color:#ccff3f;
+  font-weight:800;
+  text-decoration:none;
+}
+
+.jbi-support-note a:hover{
+  text-decoration:underline;
+}
+
+.jbi-auth-page{
+  align-items:center;
+}
+
+.jbi-auth-card{
+  width:min(760px,100%);
+  text-align:left;
+}
+
+.jbi-auth-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin-top:28px;
+}
+
+.jbi-auth-button{
+  display:inline-flex;
+  min-height:50px;
+  align-items:center;
+  justify-content:center;
+  padding:0 22px;
+  border-radius:999px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:900;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.1);
+  transition:transform .22s ease, background .22s ease, border-color .22s ease;
+}
+
+.jbi-auth-button:hover{
+  transform:translateY(-3px);
+  background:rgba(255,255,255,.15);
+  border-color:rgba(203,255,63,.45);
+}
+
+.jbi-auth-button-primary{
+  color:#092a19;
+  background:#ccff3f;
+  border-color:#ccff3f;
+  box-shadow:0 16px 40px rgba(203,255,63,.22);
+}
+
+.jbi-auth-button-primary:hover{
+  background:#ddff70;
+}
+
+@media (max-width:1000px){
+  .jbi-support-page-grid{
+    grid-template-columns:repeat(2, minmax(0,1fr));
+  }
+}
+
 .jbi-legal-footer{
   display:flex;
   flex-wrap:wrap;
@@ -1119,5 +1244,36 @@ JUST BEAN IT LEGAL PAGES
   .jbi-legal-card{
     padding:26px 18px;
     border-radius:22px;
+  }
+
+  .jbi-support-hero{
+    align-items:flex-start;
+    gap:14px;
+  }
+
+  .jbi-support-logo{
+    width:60px;
+    height:60px;
+    border-radius:18px;
+    padding:8px;
+  }
+
+  .jbi-support-page-grid{
+    grid-template-columns:1fr;
+  }
+
+  .jbi-testflight-link .jbi-link-mark{
+    width:38px;
+    height:38px;
+    border-radius:14px;
+    font-size:1.05rem;
+  }
+
+  .jbi-auth-actions{
+    flex-direction:column;
+  }
+
+  .jbi-auth-button{
+    width:100%;
   }
 }
