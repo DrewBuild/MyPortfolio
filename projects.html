@@ -80,345 +80,235 @@ COMPONENT: Mobile Menu
 </nav>
 
 <!-- =========================================================
-PROJECT 1 - JUST BEAN IT
+SCREEN CONTENT: Featured Projects
 ========================================================= -->
-<section class="project-section jbi-section">
+<main class="projects-page">
 
-  <div class="project-wrapper">
+  <section class="projects-hero" aria-labelledby="projects-title">
+    <h1 class="projects-title" id="projects-title">Projects</h1>
+    <p class="projects-intro">
+      A collection of apps, websites, and technical builds focused on product
+      thinking, clean UI, and real-world execution.
+    </p>
+  </section>
 
-    <div class="project-glass-card jbi-card">
+  <section class="projects-grid" aria-label="Featured project displays">
 
+    <article class="featured-project-card portfolio-project portfolio-card project-card-compact">
+      <div class="project-card-copy">
+        <p class="project-card-kicker">Personal Brand</p>
+        <div class="project-title-with-logo">
+          <h2 class="project-card-title">My Portfolio</h2>
+          <img
+            src="images/logos/djlogo.png"
+            alt="Drew Builds logo"
+            class="project-title-logo">
+        </div>
+        <p class="project-card-subtitle">DrewBuilds.com</p>
+        <p class="project-description">
+          A custom-built personal portfolio designed to showcase my projects,
+          skills, education, and development experience through a clean visual
+          identity and responsive frontend experience.
+        </p>
+
+        <div class="project-pill-row" aria-label="My Portfolio technology stack">
+          <span class="project-pill">HTML</span>
+          <span class="project-pill">CSS</span>
+          <span class="project-pill">JavaScript</span>
+        </div>
+
+        <div class="project-actions">
+          <a
+            href="https://github.com/DrewBuild/MyPortfolio"
+            target="_blank"
+            rel="noopener"
+            class="project-action-primary project-action-code">
+            <img
+              src="images/icons/githubicon.png"
+              alt=""
+              class="project-action-icon"
+              aria-hidden="true">
+            <span>View Code</span>
+          </a>
+        </div>
+      </div>
+    </article>
+
+    <article class="featured-project-card northstar-project northstar-card project-card-compact">
+      <div class="project-card-copy">
+        <p class="project-card-kicker">Client-Style Website</p>
+        <div class="project-title-with-logo">
+          <h2 class="project-card-title">North Star Santa</h2>
+          <img
+            src="images/projects/north-star-santa-logo.png"
+            alt="north-star-santa-logo"
+            class="project-title-logo">
+        </div>
+        <p class="project-card-subtitle">Booking website for a professional Santa experience</p>
+        <p class="project-description">
+          North Star Santa is a live client-style website built to present
+          services, testimonials, gallery content, helpful hints, and a booking
+          flow for Santa visits. The site focuses on trust, seasonal branding,
+          clear navigation, and a simple booking experience.
+        </p>
+
+        <div class="project-pill-row" aria-label="North Star Santa technology stack">
+          <span class="project-pill">HTML</span>
+          <span class="project-pill">CSS</span>
+          <span class="project-pill">JavaScript</span>
+        </div>
+
+        <div class="project-logo-action-row">
+
+          <div class="project-actions">
+            <a
+              href="https://www.northstarsanta.com/"
+              target="_blank"
+              rel="noopener"
+              class="project-action-primary">
+              View Website
+            </a>
+            <a
+              href="https://github.com/DrewBuild/North-Star-Santa"
+              target="_blank"
+              rel="noopener"
+              class="project-action-secondary project-action-code">
+              <img
+                src="images/icons/githubicon.png"
+                alt=""
+                class="project-action-icon"
+                aria-hidden="true">
+              <span>View Code</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <article class="featured-project-card jbi-project jbi-card">
       <div class="jbi-glow jbi-glow-one"></div>
       <div class="jbi-glow jbi-glow-two"></div>
 
-      <div class="jbi-hero-grid">
+      <div class="project-card-copy">
+        <p class="project-card-kicker">iOS Product Build</p>
 
-        <div class="jbi-copy">
 
-          <div class="jbi-label">
-            Custom iOS Social Coffee Platform
-          </div>
+    
 
-          <div class="jbi-title-row">
 
-            <img
-              src="images/logos/JBIguy.png"
-              alt="Just Bean It mascot"
-              class="jbi-app-icon">
+        <div class="project-title-with-logo">
+          <h2 class="project-card-title">Just Bean It.</h2>
+          <img
+            src="images/projects/just-bean-it-square.png"
+            alt="Just Bean It logo"
+            class="jbi-project-logo">
 
-            <div>
+</div>
+            <p class="project-card-subtitle">Social coffee app built with SwiftUI and Supabase</p>
 
-              <h1 class="project-title jbi-title">
-                Just Bean It.
-              </h1>
 
-              <p class="jbi-subtitle">
-                Social media coffee app
-              </p>
+        <p class="project-description">
+          Just Bean It is a custom iOS social coffee platform built from concept
+          to TestFlight. The app includes profiles, posts, coffee shop discovery,
+          ratings, photo uploads, authentication, social interactions, and
+          Supabase-backed data storage.
+        </p>
 
-            </div>
-
-          </div>
-
-          <p class="project-description jbi-description">
-            Just Bean It is a fully custom-built social coffee platform designed
-            and developed entirely by me, from initial concept and UI/UX design
-            to backend architecture and TestFlight deployment. The app was
-            created as a personal passion project to combine social networking,
-            coffee culture, and location-based discovery into a modern mobile
-            experience.
-          </p>
-
-          <p class="project-description jbi-description">
-            Built using SwiftUI and Supabase, Just Bean It leverages a scalable
-            real-time backend architecture with authentication, database
-            management, storage, and social interactions fully integrated into
-            the application. The project was developed from scratch without
-            templates, allowing complete ownership over the product vision,
-            technical implementation, and user experience.
-          </p>
-
-          <div class="jbi-logo-row" aria-label="Just Bean It technologies">
-
-            <div class="jbi-logo-pill">
-              <img src="images/pic/swiftui.png" alt="SwiftUI">
-              <span>SwiftUI</span>
-            </div>
-
-            <div class="jbi-logo-pill">
-              <img
-                src="images/icons/supabase.png"
-                alt="Supabase"
-                class="jbi-supabase-logo">
-            </div>
-
-            <a
-              href="https://testflight.apple.com/join/5DS23tf3"
-              target="_blank"
-              rel="noopener"
-              class="jbi-testflight-link"
-              aria-label="Try Just Bean It on TestFlight">
-              <img src="images/icons/testflight.webp" alt="TestFlight">
-              <span>Try on TestFlight</span>
-            </a>
-
-            <a
-              href="justbeanit-support.html"
-              class="jbi-testflight-link jbi-support-link"
-              aria-label="Open Just Bean It help and support">
-              <span class="jbi-link-mark" aria-hidden="true">?</span>
-              <span>Help &amp; Support</span>
-            </a>
-
-          </div>
-
+        <div class="project-pill-row" aria-label="Just Bean It technology stack">
+          <span class="project-pill">SwiftUI</span>
+          <span class="project-pill">Supabase</span>
         </div>
 
-      </div>
-
-      <div class="jbi-app-experience" aria-labelledby="jbi-app-experience-title">
-
-        <div class="jbi-section-heading">
-          <h2 id="jbi-app-experience-title">App Experience</h2>
-          <p>Designed to feel clean, social, and coffee-first.</p>
-        </div>
-
-        <div class="jbi-screenshot-gallery" aria-label="Just Bean It app screenshot gallery">
-
-          <figure class="jbi-screenshot-card">
-            <img src="images/screenshots/1.png" alt="Just Bean It social coffee feed screenshot">
-          </figure>
-
-          <figure class="jbi-screenshot-card">
-            <img src="images/screenshots/2.png" alt="Just Bean It coffee post and review screenshot">
-          </figure>
-
-          <figure class="jbi-screenshot-card">
-            <img src="images/screenshots/3.png" alt="Just Bean It coffee discovery map screenshot">
-          </figure>
-
-          <figure class="jbi-screenshot-card">
-            <img src="images/screenshots/4.png" alt="Just Bean It cafe detail and verified visit screenshot">
-          </figure>
-
-          <figure class="jbi-screenshot-card">
-            <img src="images/screenshots/5.png" alt="Just Bean It Coffee Studio photo editing screenshot">
-          </figure>
-
-          <figure class="jbi-screenshot-card">
-            <img src="images/screenshots/6.png" alt="Just Bean It coffee stats and badges screenshot">
-          </figure>
-
-          <figure class="jbi-screenshot-card">
-            <img src="images/screenshots/7.png" alt="Just Bean It coffee collections and profile screenshot">
-          </figure>
-
-        </div>
-
-      </div>
-
-      <div class="jbi-content-panel">
-
-        <h2>Key Features</h2>
-
-        <div class="jbi-feature-grid">
-
-          <div class="jbi-feature-card">
-            <span>01</span>
-            <strong>Social Coffee Feed</strong>
-            <p>A coffee-first feed for sharing posts, reactions, and real cafe experiences.</p>
-          </div>
-
-          <div class="jbi-feature-card">
-            <span>02</span>
-            <strong>Coffee Studio</strong>
-            <p>Built-in photo editing for polishing coffee shots before they hit the feed.</p>
-          </div>
-
-          <div class="jbi-feature-card">
-            <span>03</span>
-            <strong>Coffee Stats</strong>
-            <p>Personal tracking for favorite drinks, cafe activity, and coffee milestones.</p>
-          </div>
-
-          <div class="jbi-feature-card">
-            <span>04</span>
-            <strong>Discovery Map</strong>
-            <p>Map-driven cafe discovery for finding nearby coffee shops and revisiting favorites.</p>
-          </div>
-
-          <div class="jbi-feature-card">
-            <span>05</span>
-            <strong>Verified Cafe Visits</strong>
-            <p>Location-aware check-ins help connect posts and reviews to real cafe visits.</p>
-          </div>
-
-          <div class="jbi-feature-card">
-            <span>06</span>
-            <strong>Community Reviews</strong>
-            <p>Coffee-focused ratings and notes make each shared visit more useful.</p>
-          </div>
-
-          <div class="jbi-feature-card">
-            <span>07</span>
-            <strong>Badge System</strong>
-            <p>Progression and achievement badges reward exploration, posting, and cafe habits.</p>
-          </div>
-
-          <div class="jbi-feature-card">
-            <span>08</span>
-            <strong>Coffee Collections</strong>
-            <p>Save standout drinks, cafes, and posts into a personal coffee library.</p>
-          </div>
-
-          <div class="jbi-feature-card">
-            <span>09</span>
-            <strong>Real-Time Interactions</strong>
-            <p>Comments, likes, notifications, and social activity are backed by Supabase.</p>
-          </div>
-
-          <div class="jbi-feature-card">
-            <span>10</span>
-            <strong>Smart Search</strong>
-            <p>Recent searches and discovery patterns make it faster to return to cafes and people.</p>
-          </div>
-
-          <div class="jbi-feature-card">
-            <span>11</span>
-            <strong>Cloud Photo Storage</strong>
-            <p>Uploaded coffee photos are stored through a scalable Supabase storage workflow.</p>
-          </div>
-
-          <div class="jbi-feature-card">
-            <span>12</span>
-            <strong>Custom UI</strong>
-            <p>Responsive glassmorphism-inspired interface with custom theming.</p>
-          </div>
-
-        </div>
-
-      </div>
-
-      <p class="project-description jbi-description jbi-wide-copy">
-        What makes Just Bean It stand out is its focus on creating a dedicated
-        social platform specifically for coffee enthusiasts rather than trying
-        to be a generic review app. The app combines social networking, local
-        discovery, visual storytelling, and coffee culture into a polished
-        mobile-first experience. Features like verified location-based reviews,
-        Coffee Studio editing, map-driven exploration, badges, collections,
-        and social engagement systems create a niche community platform tailored to a
-        passionate audience.
-      </p>
-
-      <p class="project-description jbi-description jbi-wide-copy">
-        This project demonstrates end-to-end product ownership including product
-        strategy, mobile development, backend engineering, database design,
-        authentication flows, cloud storage architecture, UI/UX design,
-        deployment, and App Store/TestFlight distribution.
-      </p>
-
-      <div class="jbi-support-panel" aria-labelledby="jbi-support-title">
-
-        <div class="jbi-section-heading">
-          <h2 id="jbi-support-title">Support &amp; Resources</h2>
-          <p>Need help, found a bug, or have feedback about Just Bean It?</p>
-        </div>
-
-        <div class="jbi-support-grid">
-
+        <div class="project-actions">
           <a
-            href="mailto:drewj@drewbuilds.com"
-            class="jbi-resource-card"
-            aria-label="Contact Just Bean It support by email">
-            <span class="jbi-resource-icon" aria-hidden="true">@</span>
-            <strong>Contact Support</strong>
-            <span>Email help and feedback</span>
-          </a>
-
-          <a
-            href="justbeanit-support.html"
-            class="jbi-resource-card"
-            aria-label="Open the Just Bean It support center">
-            <span class="jbi-resource-icon" aria-hidden="true">?</span>
-            <strong>Help &amp; Support</strong>
-            <span>Account help and app resources</span>
-          </a>
-
-          <a
-            href="reset-password.html"
-            class="jbi-resource-card"
-            aria-label="Get help resetting your Just Bean It password">
-            <span class="jbi-resource-icon" aria-hidden="true">R</span>
-            <strong>Reset Password</strong>
-            <span>Account recovery help</span>
-          </a>
-
-          <a
-            href="confirm-email.html"
-            class="jbi-resource-card"
-            aria-label="Get help confirming your Just Bean It email">
-            <span class="jbi-resource-icon" aria-hidden="true">C</span>
-            <strong>Confirm Email</strong>
-            <span>Email verification help</span>
-          </a>
-
-          <a
-            href="privacy.html"
-            class="jbi-resource-card"
-            aria-label="Read the Just Bean It privacy policy">
-            <span class="jbi-resource-icon" aria-hidden="true">P</span>
-            <strong>Privacy Policy</strong>
-            <span>Data and app privacy</span>
-          </a>
-
-          <a
-            href="terms.html"
-            class="jbi-resource-card"
-            aria-label="Read the Just Bean It terms of service">
-            <span class="jbi-resource-icon" aria-hidden="true">T</span>
-            <strong>Terms of Service</strong>
-            <span>Rules and responsibilities</span>
-          </a>
-
-          <a
-            href="https://testflight.apple.com/join/5DS23tf3"
+            href="https://justbeanit.vercel.app/"
             target="_blank"
             rel="noopener"
-            class="jbi-resource-card"
-            aria-label="Open Just Bean It on TestFlight">
-            <span class="jbi-resource-icon" aria-hidden="true">TF</span>
-            <strong>TestFlight</strong>
-            <span>Try the beta app</span>
+            class="project-action-primary">
+            View Website
           </a>
+          <span class="project-action-disabled" aria-disabled="true">
+            Coming Soon on TestFlight
+          </span>
+          <a
+            href="https://github.com/DrewBuild/ProjectJBI"
+            target="_blank"
+            rel="noopener"
+            class="project-action-secondary project-action-code">
+            <img
+              src="images/icons/githubicon.png"
+              alt=""
+              class="project-action-icon"
+              aria-hidden="true">
+            <span>View Code</span>
+          </a>
+        </div>
+      </div>
+    </article>
 
+    <article class="featured-project-card asana-project asana-card">
+      <div class="project-card-copy">
+        <p class="project-card-kicker">QA Automation</p>
+        <h2 class="project-card-title">Asana Playwright Evaluation</h2>
+        <p class="project-card-subtitle">Data-driven Playwright test automation project</p>
+        <p class="project-description">
+          A TypeScript Playwright evaluation project built for a job interview.
+          The test suite automated login into an Asana-like demo app and
+          verified task placement, columns, and tags across multiple scenarios
+          using a data-driven structure to reduce duplication and improve
+          scalability.
+        </p>
+
+        <ul class="project-highlight-list">
+          <li>Automated login flow</li>
+          <li>Data-driven test scenarios</li>
+          <li>Reusable page logic</li>
+          <li>TypeScript + Playwright</li>
+          <li>Validated task columns and tags</li>
+          <li>Accuracy, maintainability, and QA detail</li>
+        </ul>
+
+        <div class="project-pill-row" aria-label="Asana Playwright Evaluation technology stack">
+          <span class="project-pill">TypeScript</span>
+          <span class="project-pill">Playwright</span>
+          <span class="project-pill">Automation Testing</span>
+          <span class="project-pill">Page Objects</span>
+          <span class="project-pill">Data-Driven Testing</span>
+          <span class="project-pill">QA</span>
         </div>
 
+        <div class="project-actions">
+          <a
+            href="https://github.com/DrewBuild/asana-playwright-evaluation"
+            target="_blank"
+            rel="noopener"
+            class="project-action-primary project-action-code">
+            <img
+              src="images/icons/githubicon.png"
+              alt=""
+              class="project-action-icon"
+              aria-hidden="true">
+            <span>View Code</span>
+          </a>
+        </div>
       </div>
 
-      <div class="project-footer jbi-footer">
+      <figure class="project-media asana-video-card">
+        <video
+          id="asana-demo-video"
+          controls
+          preload="metadata"
+          tabindex="-1">
+          <source src="images/projects/asana-playwright-evaluation.mp4" type="video/mp4">
+          Your browser does not support the video tag. The Asana Playwright demo
+          video is available at images/projects/asana-playwright-evaluation.mp4.
+        </video>
+      </figure>
+    </article>
 
-        <div class="footer-stat">
-          <span class="footer-number">SwiftUI</span>
-          <span class="footer-label">iOS Frontend</span>
-        </div>
+  </section>
 
-        <div class="footer-stat">
-          <span class="footer-number">Supabase</span>
-          <span class="footer-label">Backend</span>
-        </div>
-
-        <div class="footer-stat">
-          <span class="footer-number">TestFlight</span>
-          <span class="footer-label">Distribution</span>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
+</main>
 
 <script src="js/script.js"></script>
 
